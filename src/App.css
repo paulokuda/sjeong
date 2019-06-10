@@ -1,33 +1,58 @@
-.App {
-  text-align: center;
+body {
+  height: 2500px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  color: #d34d27;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner-text {
+  font-size: 120px;
+  font-weight: bold;
+  color: #d34d27;
+}
+
+.name-banner {
+  padding: 40px 80px;
+}
+
+.landing-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px 0;
+  height: 1300px;
+  background: #d6e2e8;
 }
 
-.App-link {
-  color: #61dafb;
+.location-banner {
+  position: relative;
+  left: 65%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-me-panel {
+  /* background-color: #313955; */
+  background: #ffffff;
+  color: #000000;
+  padding: 40px;
+}
+
+.about-me__headers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me__picture {
+  background: url('./about-me-picture.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 600px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.about-me__text-section {
+  padding: 15px 0;
 }
