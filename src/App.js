@@ -34,7 +34,7 @@ function App() {
             <div className="landing-page">
               <div className="landing-content-container">
                 <div className="nav-container">
-                  <div>[INFO]</div>
+                  <div>INFO</div>
                   <div className="nav-center-block">
                     <div>STEPH JEONG PORTFOLIO</div>
                     <div>&#169; 2019 ALL RIGHTS RESERVED</div>
