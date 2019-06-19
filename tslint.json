@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "@foundry/tslint-config"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "src/services/generated/**/*"
+    ]
+  },
+  "rules": {
+    "blueprint-classes-constants": false,
+    "blueprint-html-components": false,
+    "jsx-no-lambda": false,
+    "jsx-no-string-ref": false,
+    "no-object-literal-type-assertion": false,
+    "typestyle-debug-name": false
+  }
+}
