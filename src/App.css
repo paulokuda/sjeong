@@ -90,9 +90,6 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 140px;
-  /* position: fixed; */
-  /* height: 100%; */
-  /* height: 2035px; */
   width: 100%;
   top: 0;
   z-index: -1;
@@ -103,6 +100,10 @@ body {
   height: 715px;
   width: 500px;
   background: #dbe2e5;
+}
+
+.orange-text {
+  color: #e44a1b;
 }
 
 .client-list-message-me {
