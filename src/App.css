@@ -1,109 +1,147 @@
 body {
   height: calc(100vh + 1575px);
+  font-family: 'NHaasGroteskPro', sans-serif;
+  background-color: #000;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 120px;
-  font-size: 36px;
+  padding: 2.5vw 10vw;
+  font-size: 2vw;
+  vertical-align: baseline;
+  color: #262626;
 }
 
 .landing-wrapper {
-  background: #000000;
-  padding: 35px;
+  position: relative;
+  padding: 2.5vw;
 }
 
 .nav-center-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 1vw;
+  line-height: 1.4vw;
+  letter-spacing: -0.02vw;
+  color: #262626;
 }
 
 .about-me-footer {
   display: flex;
   justify-content: space-between;
-  padding: 35px;
+  position: absolute;
+  bottom: 5vw;
+  width: 90vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1vw;
+  line-height: 1.4vw;
+  letter-spacing: -0.02vw;
+  color: #262626;
 }
 
 .about-me-footer__section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20vw;
 }
 
 .collab-blurb {
   text-align: right;
-  padding-right: 60px;
-  padding-bottom: 65px;
+  padding-right: 5vw;
+  position: absolute;
+  bottom: 15vw;
+  width: 90vw;
+  color: #262626;
 }
 
 .collab-blurb-hello {
-  color: #e44a1b;
+  color: #E44A1B;
 }
 
 .banner-text {
-  font-size: 160px;
+  font-size: 10vw;
+  line-height: 9vw;
+  letter-spacing: -0.4vw;
 }
 
 .name-banner {
-  padding: 60px 65px;
+  padding: 2.5vw 5vw;
+  color: #262626;
 }
 
 .landing-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: #e2e1da;
-  height: 1500px;
+  height: 120vw;
 }
 
 .about-me__about {
-  padding-left: 120px;
-  font-size: 36px;
-  color: #d8d8d8;
+  padding: 2.5vw 0vw 2.5vw 2.5vw;
+  font-size: 2vw;
+  color: #fff;
+  background: #818E87;
 }
 
 .about-me-panel {
-  background: #303857;
-  color: #000000;
-  padding: 40px;
+
 }
 
 .about-me__picture {
-  background: url('./Steph_pixel.png') no-repeat center center #dbe2e5;
+  background: url('./steph_grain_green.png') no-repeat center center;
   background-size: 100% 100%;
-  height: 640px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  height: 45vw;
+  width: 45vw;
+  border-style: solid;
+  border-width: 2.5vw;
+  border-color: #818E87;
 }
 
 .about-me__text-section {
-  padding: 15px 0;
-  color: #d8d8d8;
+  padding: 0vw 2.5vw 5vw 2.5vw;
+  color: #fff;
+  background: #818E87;
+  font-size: 1.6vw;
+  line-height: 2vw;
+  letter-spacing: -0.03vw;
 }
 
 .client-landing {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 140px;
+  font-size: 10vw;
+  line-height: 9vw;
   width: 100%;
   top: 0;
+  padding: 2.5vw 0vw 2.5vw 0vw;
+  text-transform: uppercase;
+  letter-spacing: -0.36vw;
   z-index: -1;
+  background: #000;
+  color: #d7d7d7;
+  overflow: hidden;
 }
 
 .client-project-card {
   position: absolute;
-  height: 715px;
-  width: 500px;
-  background: #dbe2e5;
+  height: 40vw;
+  width: 30vw;
 }
 
 .orange-text {
   color: #e44a1b;
+}
+
+.black-text {
+  color: #000;
 }
 
 .client-list-message-me {
@@ -111,38 +149,331 @@ body {
 }
 
 .client-project-card__01 {
-  top: 30px;
-  left: 110px;
+  top: 0vw;
+  left: 0vw;
 }
 
 .client-project-card__02 {
-  top: 300px;
-  right: 75px;
+  top: 0vw;
+  right: 0vw;
 }
 
 .client-project-card__04 {
-  top: 700px;
-  left: -75px;
+  top: 0vw;
+  left: 0vw;
 }
 
 .client-project-card__03 {
-  top: 1325px;
-  right: 105px;
+  top: 0vw;
+  right: 0vw;
 }
 
 .client-project-number {
-  position: absolute;
-  font-size: 160px;
-  bottom: 30px;
-  right: 45px;
+  font-size: 2vw;
+  width: 26vw;
+  padding: 2vw;
+  bottom: 0;
+  background-color: #000;
+  text-transform: uppercase;
+  letter-spacing: -0.04vw;
+  color: #fff;
 }
 
 .client-project-image {
-  position: absolute;
   top: 0;
   right: 0;
   background: url('./Steph_pixel.png') no-repeat center center;
   background-size: 100% 100%;
-  height: 500px;
-  width: 430px;
+  height: 40vw;
+  width: 30vw;
+}
+
+.first-project-image {
+  background: url('./first-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.second-project-image {
+  background: url('./second-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.third-project-image {
+  background: url('./third-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.fourth-project-image {
+  background: url('./fourth-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.fifth-project-image {
+  background: url('./fifth-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+body {
+  height: calc(100vh + 1575px);
+  font-family: 'NHaasGroteskPro', sans-serif;
+  background-color: #000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vw;
+  font-size: 6vw;
+  vertical-align: baseline;
+  color: #262626;
+}
+
+.landing-wrapper {
+  position: relative;
+  padding: 2.5vw;
+}
+
+.nav-center-block {
+  display: none;
+}
+
+.about-me-footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5vw;
+  width: 90vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1vw;
+  line-height: 1.4vw;
+  letter-spacing: -0.02vw;
+  color: #262626;
+}
+
+.about-me-footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+}
+
+.collab-blurb {
+  text-align: right;
+  padding-right: 5vw;
+  position: absolute;
+  bottom: 15vw;
+  width: 90vw;
+  color: #262626;
+}
+
+.collab-blurb-hello {
+  color: #E44A1B;
+}
+
+.banner-text {
+  font-size: 10vw;
+  line-height: 9vw;
+  letter-spacing: -0.4vw;
+}
+
+.name-banner {
+  padding: 2.5vw 5vw;
+  color: #262626;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  background: #e2e1da;
+  height: 160vw;
+}
+
+.about-me__about {
+  padding: 2.5vw 0vw 2.5vw 2.5vw;
+  font-size: 2vw;
+  color: #fff;
+  background: #818E87;
+}
+
+.about-me-panel {
+
+}
+
+.about-me__picture {
+  background: url('./steph_grain_green.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 45vw;
+  width: 45vw;
+  border-style: solid;
+  border-width: 2.5vw;
+  border-color: #818E87;
+}
+
+.about-me__text-section {
+  padding: 0vw 2.5vw 5vw 2.5vw;
+  color: #fff;
+  background: #818E87;
+  font-size: 1.6vw;
+  line-height: 2vw;
+  letter-spacing: -0.03vw;
+}
+
+.client-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10vw;
+  line-height: 9vw;
+  width: 100%;
+  top: 0;
+  padding: 2.5vw 0vw 2.5vw 0vw;
+  text-transform: uppercase;
+  letter-spacing: -0.36vw;
+  z-index: -1;
+  background: #000;
+  color: #d7d7d7;
+  overflow: hidden;
+}
+
+.client-project-card {
+  position: absolute;
+  height: 40vw;
+  width: 30vw;
+}
+
+.orange-text {
+  color: #e44a1b;
+}
+
+.black-text {
+  color: #000;
+}
+
+.client-list-message-me {
+  color: #e44a1b;
+}
+
+.client-project-card__01 {
+  top: 0vw;
+  left: 0vw;
+}
+
+.client-project-card__02 {
+  top: 0vw;
+  right: 0vw;
+}
+
+.client-project-card__04 {
+  top: 0vw;
+  left: 0vw;
+}
+
+.client-project-card__03 {
+  top: 0vw;
+  right: 0vw;
+}
+
+.client-project-number {
+  font-size: 2vw;
+  width: 26vw;
+  padding: 2vw;
+  bottom: 0;
+  background-color: #000;
+  text-transform: uppercase;
+  letter-spacing: -0.04vw;
+  color: #fff;
+}
+
+.client-project-image {
+  top: 0;
+  right: 0;
+  background: url('./Steph_pixel.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 40vw;
+  width: 30vw;
+}
+
+.first-project-image {
+  background: url('./first-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.second-project-image {
+  background: url('./second-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.third-project-image {
+  background: url('./third-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.fourth-project-image {
+  background: url('./fourth-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
+.fifth-project-image {
+  background: url('./fifth-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 26vw;
+  width: 26vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color: #000;
+}
+
 }
