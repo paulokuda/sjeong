@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import './App.css';
+import FlashingText from './FlashingText';
 
 function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
@@ -38,7 +39,9 @@ function Landing(props) {
                     <div>STEPH JEONG PORTFOLIO</div>
                     <div>&#169;2019 ALL RIGHTS RESERVED</div>
                   </div>
-                  <div>(SCROLL) &#8595;</div>
+                  <div>
+                    <FlashingText>(SCROLL) &#8595;</FlashingText>
+                  </div>
                 </div>
                 <div className="name-banner banner-text">
                   <div>STEPH JEONG</div>
@@ -76,7 +79,7 @@ function Landing(props) {
               My name is Steph Jeong, and I’m a digital designer who specializes in product, but dabbles in all things creative. I was born in Seoul, Korea, where Gangnam Style was based in. In my puberty days, my family moved to a small town in Georgia until I went off to Carnegie Mellon University to study communication design. Now, I’m happily living in Brooklyn, NY.
               <br></br>
               <br></br>
-              Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to <span className="black-text">[Say Hi]</span>. I also just like to make new friends, so feel free to follow me on <span className="black-text">[Twitter]</span> or <span className="black-text">[Instagram]</span> where you’ll find some high-quality curation of dumb shit only. 
+              Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to <FlashingText className="black-text">[Say Hi]</FlashingText>. I also just like to make new friends, so feel free to follow me on <span className="black-text">[Twitter]</span> or <span className="black-text">[Instagram]</span> where you’ll find some high-quality curation of dumb shit only. 
               <br></br>
               <br></br>
               When I’m not designing, I love to cook for friends, stalk other people’s cats on instagram, and be a blanket burrito. Sometimes, I also write to share my knowledge and thoughts. If you ever want to learn how to be more sketchy, check out my <span className="black-text">[Article]</span>.  Thanks for stopping by!
@@ -101,7 +104,7 @@ function Landing(props) {
             <div>Credit Karma</div>
             <div>Fetch</div>
             <div>&You</div>
-            <div className="client-list-message-me">[MESSAGE ME]</div>
+            <div className="client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
           {props.displayedProjects.map((project, index) => (
             <Parallax y={project.y} styleOuter={project.styleOuter} styleInner={project.styleInner}>

@@ -26,7 +26,7 @@ function Nda(props) {
     
     return (
         <div className="nda-main">
-            <div style={{ display: "flex", flexDirection: "column" }}>{currentNdaElements}</div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>{currentNdaElements}</div>
             <div className="nda-content">
                 <div className="nda-header">
                     <div className="nda-header__left">[CLIENTS]</div>

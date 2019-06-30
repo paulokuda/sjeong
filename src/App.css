@@ -8,7 +8,7 @@ body {
 }
 
 .landing-body {
-  height: calc(100vh + 1575px);
+  height: 400vh;
 }
 
 .nav-container {
@@ -486,17 +486,27 @@ body {
 }
 
 .nda-main {
+  display: flex;
+  flex-direction: column;
   background: #E44A1B;
   height: 100vh;
   overflow: hidden;
 }
 
 .nda-flash-row {
+  font-size: 10vw;
+  line-height: 9vw;
+  width: 100%;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.36vw;
+  color: #d7d7d7;
+  overflow: hidden;
+
   display: flex;
   flex: 1 1 0;
   justify-content: space-between;
-  color: white;
-  font-size: 124px;
+  /* align-items: center; */
 }
 
 .nda-content {
@@ -550,4 +560,8 @@ body {
 
 .nda-message-me {
   padding-top: 50px;
+}
+
+.flashing-text__hidden {
+  visibility: hidden;
 }

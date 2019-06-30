@@ -45,7 +45,7 @@ const ALL_PROJECTS = [
 ];
 
 function App() {
-  const [showNda, setShowNda] = useState(true);
+  const [showNda, setShowNda] = useState(false);
   const [displayedProjects, setDisplayedProjects] = useState(ALL_PROJECTS);
   
   const setNdaViewCallback = (projectIndex) => {
