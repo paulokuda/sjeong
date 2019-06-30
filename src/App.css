@@ -36,6 +36,15 @@ body {
   color: #262626;
 }
 
+.nav-block {
+  flex: 1;
+}
+
+.nav-right-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .about-me-footer {
   display: flex;
   justify-content: space-between;

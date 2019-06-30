@@ -46,12 +46,12 @@ function Landing(props) {
             <div className="landing-page">
               <div className="landing-content-container">
                 <div className="nav-container">
-                  <div>INFO</div>
-                  <div className="nav-center-block">
+                  <div className="nav-block">INFO</div>
+                  <div className="nav-block nav-center-block">
                     <div>STEPH JEONG PORTFOLIO</div>
                     <div>&#169;2019 ALL RIGHTS RESERVED</div>
                   </div>
-                  <div>
+                  <div className="nav-block nav-right-block">
                     <FlashingText>(SCROLL) &#8595;</FlashingText>
                   </div>
                 </div>
