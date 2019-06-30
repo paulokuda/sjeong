@@ -38,7 +38,13 @@ function Nda(props) {
                     <div className="nda-header__right">&#169; 2019</div>
                 </div>
                 <div className="nda-body">
-                    <div className="nda-photo" />
+                    <div className="nda-photo">
+                        <div class="wrapper">
+                            <div class="pie spinner"></div>
+                            <div class="pie filler"></div>
+                            <div class="mask"></div>
+                        </div>
+                    </div>
                     <span className="nda-message-me">[MESSAGE ME]</span>
                 </div>
             </div>
