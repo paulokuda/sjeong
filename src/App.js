@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import  Landing from "./Landing";
 import Nda  from "./Nda";
 import './App.css';
