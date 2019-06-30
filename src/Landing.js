@@ -5,6 +5,7 @@ import FlashingText from './FlashingText';
 
 function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
+  const [showTwitterCard, setShowTwitterCard] = useState(false);
   const landingWrapperRef = useRef(null);
   const clientLanding = useRef(null);
   useEffect(() => {
@@ -28,6 +29,17 @@ function Landing(props) {
   
   return (
     <div className="landing-body">
+      {showTwitterCard ? (
+        <div className="twitter-card">
+          <div>
+            <span className="black-text">I just realized a </span>dog <span className="black-text">is called a </span>dog <span className="black-text">because the word looks like a </span>dog.
+          </div>
+          <div className="twitter-card__footer">
+            <div>- Me</div>
+            <div className="black-text">March 8, 2015</div>
+          </div>
+        </div>
+      ) : null}
       <ParallaxProvider>
         <Parallax>
           <div ref={landingWrapperRef} className="landing-wrapper">
@@ -56,7 +68,7 @@ function Landing(props) {
                   <div>[JEONGSTEPH@GMAIL.COM]</div>
                 </div>
                 <div className="about-me-footer__section">
-                  <div>TWITTER</div>
+                  <div onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}>TWITTER</div>
                   <div>[@JEONGSTEPH]</div>
                 </div>
                 <div className="about-me-footer__section">
@@ -79,7 +91,7 @@ function Landing(props) {
               My name is Steph Jeong, and I’m a digital designer who specializes in product, but dabbles in all things creative. I was born in Seoul, Korea, where Gangnam Style was based in. In my puberty days, my family moved to a small town in Georgia until I went off to Carnegie Mellon University to study communication design. Now, I’m happily living in Brooklyn, NY.
               <br></br>
               <br></br>
-              Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to <FlashingText className="black-text">[Say Hi]</FlashingText>. I also just like to make new friends, so feel free to follow me on <span className="black-text">[Twitter]</span> or <span className="black-text">[Instagram]</span> where you’ll find some high-quality curation of dumb shit only. 
+              Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to <FlashingText className="black-text">[Say Hi]</FlashingText>. I also just like to make new friends, so feel free to follow me on <span className="black-text" onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}>[Twitter]</span> or <span className="black-text">[Instagram]</span> where you’ll find some high-quality curation of dumb shit only. 
               <br></br>
               <br></br>
               When I’m not designing, I love to cook for friends, stalk other people’s cats on instagram, and be a blanket burrito. Sometimes, I also write to share my knowledge and thoughts. If you ever want to learn how to be more sketchy, check out my <span className="black-text">[Article]</span>.  Thanks for stopping by!

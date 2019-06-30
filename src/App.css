@@ -565,3 +565,23 @@ body {
 .flashing-text__hidden {
   visibility: hidden;
 }
+
+.twitter-card {
+  width: 500px;
+  font-size: 2vw;
+  position: fixed;
+  padding: 20px;
+  top: 200px;
+  left: 100px;
+  background: #E44A1B;
+  z-index: 1;
+  color: #e2e1da;
+  transform: rotate(90deg);
+}
+
+.twitter-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
