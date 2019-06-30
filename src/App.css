@@ -144,6 +144,15 @@ body {
   cursor: pointer;
 }
 
+.client-project-card:hover > .client-project-card__image {
+  border-color: white;
+}
+
+.client-project-card:hover > .client-project-number {
+  background: white;
+  color: black;
+}
+
 .orange-text {
   color: #e44a1b;
 }

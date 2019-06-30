@@ -121,7 +121,7 @@ function Landing(props) {
           {props.displayedProjects.map((project, index) => (
             <Parallax y={project.y} styleOuter={project.styleOuter} styleInner={project.styleInner}>
               <div className={`client-project-card ${project.className}`} onClick={() => props.setNdaViewCallback(index)}>
-                <div className={project.imageClassName} />
+                <div className={`${project.imageClassName} client-project-card__image`} />
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
               </div>
           </Parallax>
