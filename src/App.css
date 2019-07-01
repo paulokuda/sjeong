@@ -8,7 +8,19 @@ body {
 }
 
 .landing-body {
-  height: 100vh;
+  position: absolute;
+  height: 100%;
+  top: 3vh;
+  background-color: #000;
+  color: #FFF;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.landing-body__visible {
+  opacity: 1;
+  top: 0;
+  width: 100%;
 }
 
 .nav-container {
@@ -106,8 +118,8 @@ body {
   background: #818E87;
 }
 
-.about-me-panel {
-
+.about-me-panel__paralax {
+  transition: all 1.5s;
 }
 
 .about-me__picture {

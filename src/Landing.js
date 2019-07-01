@@ -6,9 +6,12 @@ import FlashingText from './FlashingText';
 function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
   const [showTwitterCard, setShowTwitterCard] = useState(false);
+  const [slideInLanding, setSlideInLanding] = useState(false);
   const landingWrapperRef = useRef(null);
   const clientLanding = useRef(null);
   useEffect(() => {
+    setSlideInLanding(true);
+    
     document.addEventListener("scroll", () => {
       if (isElementOutOfViewport(landingWrapperRef.current) && isLandingInView) {
         setLandingInView(false);
@@ -27,10 +30,18 @@ function Landing(props) {
     );
   }
 
-  console.log("props", props)
+  const getTopValue = () => {
+    if (!slideInLanding) {
+      return "70vh";  
+    }
+    if (props.isMobileScreen) {
+      return "55vh";
+    }
+    return "40vh";
+  }
   
   return (
-    <div className="landing-body">
+    <div className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
       {showTwitterCard ? (
         <div className="twitter-card">
           <div>
@@ -85,7 +96,7 @@ function Landing(props) {
             </div>
           </div>
         </Parallax>
-        <Parallax y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "90vw" : "50vw", position: "absolute", top: props.isMobileScreen ? "55vh" : "60vh", right: 0 }}>
+        <Parallax className="about-me-panel__paralax" y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "90vw" : "50vw", position: "absolute", top: getTopValue(), right: 0 }}>
           <div className="about-me-panel">
             <div className="about-me__about">&#8627; ABOUT </div>
             <div className="about-me__picture"/>
