@@ -276,6 +276,10 @@ body {
   border-color: #000;
 }
 
+.client-project-image__black-bg {
+  background: #000;
+}
+
 .nda-main {
   display: flex;
   flex-direction: column;

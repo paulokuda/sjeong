@@ -7,7 +7,7 @@ function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
   const [showTwitterCard, setShowTwitterCard] = useState(false);
   const [slideInLanding, setSlideInLanding] = useState(false);
-  const [landingPageHeight, setLandingPageHeight] = useState(0);
+  const [projectBackBgIndex, setProjectBackBgIndex] = useState(-1);
   const landingWrapperRef = useRef(null);
   const landingBodyRef = useRef(null);
 
@@ -41,6 +41,15 @@ function Landing(props) {
       return "70vh";  
     }
     return "40vh";
+  }
+
+  const handleProjectCardMouseEnter = (index) => {
+    setProjectBackBgIndex(index);
+    setTimeout(removeProjectCardBlackBackground, 100);
+  }
+
+  const removeProjectCardBlackBackground = () => {
+    setProjectBackBgIndex(-1);
   }
   
   return (
@@ -136,8 +145,8 @@ function Landing(props) {
           </div>
           {props.displayedProjects.map((project, index) => (
             <Parallax key={`project-${index}`} y={project.y} styleOuter={{ ...project.styleOuter, width: props.isMobileScreen ? "60vw" : project.styleOuter.width, height: props.isMobileScreen ? "80vw" : project.styleOuter.height }} styleInner={project.styleInner}>
-              <div className={`client-project-card ${project.className}`} onClick={() => props.setNdaViewCallback(index)}>
-                <div className={`${project.imageClassName} client-project-card__image`} />
+              <div onMouseEnter={() => handleProjectCardMouseEnter(index)} className={`client-project-card ${project.className}`} onClick={() => props.setNdaViewCallback(index)}>
+                <div className={`${projectBackBgIndex === index ? "client-project-image__black-bg" : ""} ${project.imageClassName} client-project-card__image`} />
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
               </div>
           </Parallax>
