@@ -7,10 +7,13 @@ function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
   const [showTwitterCard, setShowTwitterCard] = useState(false);
   const [slideInLanding, setSlideInLanding] = useState(false);
+  const [landingPageHeight, setLandingPageHeight] = useState(0);
   const landingWrapperRef = useRef(null);
-  const clientLanding = useRef(null);
+  const landingBodyRef = useRef(null);
+
   useEffect(() => {
     setSlideInLanding(true);
+    setLandingPageHeight(landingWrapperRef.current.clientHeight);
     
     document.addEventListener("scroll", () => {
       if (isElementOutOfViewport(landingWrapperRef.current) && isLandingInView) {
@@ -31,17 +34,17 @@ function Landing(props) {
   }
 
   const getTopValue = () => {
+    if (props.isMobileScreen) {
+      return "50vh";
+    }
     if (!slideInLanding) {
       return "70vh";  
-    }
-    if (props.isMobileScreen) {
-      return "55vh";
     }
     return "40vh";
   }
   
   return (
-    <div className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
+    <div ref={landingBodyRef} className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
       {showTwitterCard ? (
         <div className="twitter-card">
           <div>
@@ -112,9 +115,9 @@ function Landing(props) {
           </div>
         </Parallax>
       </ParallaxProvider>
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative", height: `calc(${landingPageHeight}px + 100vh)` }}>
         <ParallaxProvider>
-          <div ref={clientLanding} className="client-landing" style={{ position: isLandingInView ? "fixed" : "relative" }}>
+          <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative", bottom: props.isMobileScreen ? 0 : "none" }}>
             <div className="client-landing__item">CLIENTS &#8595;</div>
             <div className="client-landing__item">FACEBOOK</div>
             <div className="client-landing__item">Samsung</div>

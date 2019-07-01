@@ -5,6 +5,7 @@
 body {
   font-family: 'NHaasGroteskPro', sans-serif;
   background-color: #000;
+  height: calc(100vh + 2200px);
 }
 
 .landing-body {

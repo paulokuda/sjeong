@@ -47,7 +47,7 @@ const ALL_PROJECTS = [
 const MOBILE_BREAKPOINT = 600;
 
 function App() {
-  const [showNda, setShowNda] = useState(true);
+  const [showNda, setShowNda] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [displayedProjects, setDisplayedProjects] = useState(ALL_PROJECTS);
 
