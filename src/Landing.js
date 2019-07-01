@@ -13,7 +13,7 @@ function Landing(props) {
 
   useEffect(() => {
     setSlideInLanding(true);
-    setLandingPageHeight(landingWrapperRef.current.clientHeight);
+    // setLandingPageHeight(landingWrapperRef.current.clientHeight);
     
     document.addEventListener("scroll", () => {
       if (isElementOutOfViewport(landingWrapperRef.current) && isLandingInView) {
@@ -115,7 +115,7 @@ function Landing(props) {
           </div>
         </Parallax>
       </ParallaxProvider>
-      <div style={{ position: "relative", height: `calc(${landingPageHeight}px + 100vh)` }}>
+      <div style={{ position: "relative"}}>
         <ParallaxProvider>
           <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative", bottom: props.isMobileScreen ? 0 : "none" }}>
             <div className="client-landing__item">CLIENTS &#8595;</div>
