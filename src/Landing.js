@@ -26,6 +26,8 @@ function Landing(props) {
              || (rect.x > window.innerWidth || rect.y > window.innerHeight)
     );
   }
+
+  console.log("props", props)
   
   return (
     <div className="landing-body">
@@ -83,7 +85,7 @@ function Landing(props) {
             </div>
           </div>
         </Parallax>
-        <Parallax y={["550px", "-1850px"]} styleOuter={{ width: "50vw", position: "absolute", top: "60vh", right: 0 }}>
+        <Parallax y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "90vw" : "50vw", position: "absolute", top: props.isMobileScreen ? "55vh" : "60vh", right: 0 }}>
           <div className="about-me-panel">
             <div className="about-me__about">&#8627; ABOUT </div>
             <div className="about-me__picture"/>
@@ -102,24 +104,24 @@ function Landing(props) {
       <div style={{ position: "relative" }}>
         <ParallaxProvider>
           <div ref={clientLanding} className="client-landing" style={{ position: isLandingInView ? "fixed" : "relative" }}>
-            <div>CLIENTS &#8595;</div>
-            <div>FACEBOOK</div>
-            <div>Samsung</div>
-            <div>Globo</div>
-            <div>Reuters</div>
-            <div>POND5</div>
-            <div>VISA</div>
-            <div>Redbull</div>
-            <div>Sotheby's</div>
-            <div>Dorsia</div>
-            <div>Bluevine</div>
-            <div>Credit Karma</div>
-            <div>Fetch</div>
-            <div>&You</div>
-            <div className="client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
+            <div className="client-landing__item">CLIENTS &#8595;</div>
+            <div className="client-landing__item">FACEBOOK</div>
+            <div className="client-landing__item">Samsung</div>
+            <div className="client-landing__item">Globo</div>
+            <div className="client-landing__item">Reuters</div>
+            <div className="client-landing__item">POND5</div>
+            <div className="client-landing__item">VISA</div>
+            <div className="client-landing__item">Redbull</div>
+            <div className="client-landing__item">Sotheby's</div>
+            <div className="client-landing__item">Dorsia</div>
+            <div className="client-landing__item">Bluevine</div>
+            <div className="client-landing__item">Credit Karma</div>
+            <div className="client-landing__item">Fetch</div>
+            <div className="client-landing__item">&You</div>
+            <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
           {props.displayedProjects.map((project, index) => (
-            <Parallax y={project.y} styleOuter={project.styleOuter} styleInner={project.styleInner}>
+            <Parallax y={project.y} styleOuter={{ ...project.styleOuter, width: props.isMobileScreen ? "60vw" : props.styleOuter.width, height: props.isMobileScreen ? "80vw" : props.styleOuter.height }} styleInner={project.styleInner}>
               <div className={`client-project-card ${project.className}`} onClick={() => props.setNdaViewCallback(index)}>
                 <div className={`${project.imageClassName} client-project-card__image`} />
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
