@@ -276,12 +276,205 @@ body {
   border-color: #000;
 }
 
+.nda-main {
+  display: flex;
+  flex-direction: column;
+  background: #E44A1B;
+  height: 100vh;
+  overflow: hidden;
+}
 
+.nda-flash-row {
+  font-size: 10vw;
+  line-height: 9vw;
+  width: 100%;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.36vw;
+  color: #d7d7d7;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nda-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 100px;
+}
+
+.nda-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nda-header__middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nda-header__left {
+  flex: 1;
+}
+
+.nda-header__right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.nda-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nda-photo {
+  background: url('./steph_grain_green.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 25vw;
+  width: 25vw;
+  background-color: #e2e1da;
+}
+
+.nda-message-me {
+  padding-top: 50px;
+}
+
+.flashing-text__hidden {
+  visibility: hidden;
+}
+
+.twitter-card {
+  width: 500px;
+  font-size: 2vw;
+  position: fixed;
+  padding: 20px;
+  top: 200px;
+  left: 100px;
+  background: #E44A1B;
+  z-index: 1;
+  color: #e2e1da;
+  transform: rotate(90deg);
+}
+
+.twitter-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.wrapper {
+  position: relative;
+  margin: 40px auto;
+  background: none;
+}
+
+.wrapper, .wrapper * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.wrapper .pie {
+  width: 50%;
+  height: 100%;
+  transform-origin: 100% 50%;
+  position: absolute;
+  background: #000;
+  border: 5px solid rgba(0,0,0,0.5);
+}
+
+.wrapper .spinner {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  z-index: 200;
+  border-right: none;
+  animation: rota 5s linear forwards;
+}
+
+.wrapper:hover .spinner,
+.wrapper:hover .filler,
+.wrapper:hover .mask {
+  animation-play-state: running;
+}
+
+.wrapper .filler {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  left: 50%;
+  opacity: 0;
+  z-index: 100;
+  animation: opa 5s steps(1, end) forwards reverse;
+  border-left: none;
+}
+
+.wrapper .mask {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  opacity: 1;
+  z-index: 300;
+  animation: opa 5s steps(1, end) forwards;
+}
+
+@keyframes rota {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+.nda-photo__tear-initial {
+  top: 43%;
+  background: url('./tear.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  left: 51.5%;
+  transition: all 1s;
+  visibility: hidden;
+}
+
+.nda-photo__tear {
+  visibility: visible;
+  top: 48%;
+  /* width: 15vw;
+  /* border-style: solid;
+  border-width: 2.5vw;
+  border-color: #818E87; */
+}
 
 @media screen and (max-width: 600px) {
 
   body {
-    height: calc(100vh + 1575px);
+    height: 100%;
     font-family: 'NHaasGroteskPro', sans-serif;
     background-color: #000;
   }
@@ -319,6 +512,14 @@ body {
     line-height: 1.4vw;
     letter-spacing: -0.02vw;
     color: #262626;
+  }
+
+  .nda-photo {
+    background: url('./steph_grain_green.png') no-repeat center center;
+    background-size: 100% 100%;
+    height: 50vw;
+    width: 50vw;
+    background-color: #e2e1da;
   }
 
   .about-me-footer__section {
@@ -518,200 +719,25 @@ body {
     border-color: #000;
   }
 
-}
-
-.nda-main {
-  display: flex;
-  flex-direction: column;
-  background: #E44A1B;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.nda-flash-row {
-  font-size: 10vw;
-  line-height: 9vw;
-  width: 100%;
-  top: 0;
-  text-transform: uppercase;
-  letter-spacing: -0.36vw;
-  color: #d7d7d7;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.nda-content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 200px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 100px;
-}
-
-.nda-header {
-  display: flex;
-  align-items: flex-end;
-}
-
-.nda-header__middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
-.nda-header__left {
-  flex: 1;
-}
-
-.nda-header__right {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
-
-.nda-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-.nda-photo {
-  background: url('./steph_grain_green.png') no-repeat center center;
-  background-size: 100% 100%;
-  height: 25vw;
-  width: 25vw;
-  background-color: #e2e1da;
-}
-
-.nda-message-me {
-  padding-top: 50px;
-}
-
-.flashing-text__hidden {
-  visibility: hidden;
-}
-
-.twitter-card {
-  width: 500px;
-  font-size: 2vw;
-  position: fixed;
-  padding: 20px;
-  top: 200px;
-  left: 100px;
-  background: #E44A1B;
-  z-index: 1;
-  color: #e2e1da;
-  transform: rotate(90deg);
-}
-
-.twitter-card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.wrapper {
-  position: relative;
-  margin: 40px auto;
-  background: none;
-}
-
-.wrapper, .wrapper * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.wrapper {
-  width: 150px;
-  height: 150px;
-}
-
-.wrapper .pie {
-  width: 50%;
-  height: 100%;
-  transform-origin: 100% 50%;
-  position: absolute;
-  background: #000;
-  border: 5px solid rgba(0,0,0,0.5);
-}
-
-.wrapper .spinner {
-  border-radius: 100% 0 0 100% / 50% 0 0 50%;
-  z-index: 200;
-  border-right: none;
-  animation: rota 5s linear forwards;
-}
-
-.wrapper:hover .spinner,
-.wrapper:hover .filler,
-.wrapper:hover .mask {
-  animation-play-state: running;
-}
-
-.wrapper .filler {
-  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-  left: 50%;
-  opacity: 0;
-  z-index: 100;
-  animation: opa 5s steps(1, end) forwards reverse;
-  border-left: none;
-}
-
-.wrapper .mask {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  background: inherit;
-  opacity: 1;
-  z-index: 300;
-  animation: opa 5s steps(1, end) forwards;
-}
-
-@keyframes rota {
-  0% {
-    transform: rotate(360deg);
+  .nda-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
   }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes opa {
-  0% {
-    opacity: 0;
-  }
-  50%, 100% {
-    opacity: 1;
-  }
-}
 
-.nda-photo__tear-initial {
-  top: 43%;
-  background: url('./tear.png') no-repeat center center;
-  background-size: 100% 100%;
-  height: 20px;
-  width: 10px;
-  position: absolute;
-  left: 51.5%;
-  transition: all 1s;
-  visibility: hidden;
-}
+  .nda-header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 3vw;
+  }
 
-.nda-photo__tear {
-  visibility: visible;
-  top: 48%;
-  /* width: 15vw;
-  /* border-style: solid;
-  border-width: 2.5vw;
-  border-color: #818E87; */
+  .wrapper {
+    height: 75px;
+    width: 75px;
+  }
 }

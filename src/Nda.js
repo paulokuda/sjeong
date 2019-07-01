@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import './App.css';
 
-const NDA_COUNT = 7;
+const NDA_COUNT = 50;
 
 const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div></div>);
 
 function Nda(props) {
-    const [currentNdaElements, setCurrentNdaElements] = useState([]);
-    const [ndaRowCount, setNdaRowCount] = useState(0);
+    const [currentNdaElements, setCurrentNdaElements] = useState([(<div className="nda-flash-row"><div>NDA</div><div>NDA</div></div>)]);
     const [showFaceTear, setShowFaceTear] = useState(false);
 
     
     let renderInterval;
     useEffect(() => {
-        setNdaRowCount(Math.round(window.innerHeight / 150) + 1);
-        renderInterval = setInterval(renderNda, 200);
+        renderInterval = setInterval(renderNda, 100);
         setTimeout(() => setShowFaceTear(true), 5000);
-    });
+    }, []);
     
     function renderNda() {
-        if (currentNdaElements.length === ndaRowCount) {
+        if (currentNdaElements.length === NDA_COUNT) {
             clearInterval(renderInterval);
         } else {
             currentNdaElements.push(NDA_ELEMENT);
