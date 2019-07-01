@@ -527,9 +527,8 @@ body {
   overflow: hidden;
 
   display: flex;
-  flex: 1 1 0;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: flex-start;
 }
 
 .nda-content {
@@ -612,7 +611,7 @@ body {
 .wrapper {
   position: relative;
   margin: 40px auto;
-  background: white;
+  background: none;
 }
 
 .wrapper, .wrapper * {
@@ -622,8 +621,8 @@ body {
 }
 
 .wrapper {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
 }
 
 .wrapper .pie {
@@ -632,7 +631,7 @@ body {
   transform-origin: 100% 50%;
   position: absolute;
   background: #08C;
-  border: 5px solid rgba(0,0,0,0.5);
+  /* border: 5px solid rgba(0,0,0,0.5); */
 }
 
 .wrapper .spinner {

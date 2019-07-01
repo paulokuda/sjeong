@@ -8,14 +8,17 @@ const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div>
 
 function Nda(props) {
     const [currentNdaElements, setCurrentNdaElements] = useState([]);
+    const [ndaRowCount, setNdaRowCount] = useState(0);
+
     
     let renderInterval;
     useEffect(() => {
-        renderInterval = setInterval(renderNda, 100);
+        setNdaRowCount(Math.round(window.innerHeight / 150) + 1);
+        renderInterval = setInterval(renderNda, 200);
     });
     
     function renderNda() {
-        if (currentNdaElements.length === NDA_COUNT) {
+        if (currentNdaElements.length === ndaRowCount) {
             clearInterval(renderInterval);
         } else {
             currentNdaElements.push(NDA_ELEMENT);
