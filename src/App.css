@@ -579,6 +579,8 @@ body {
     border-style: solid;
     border-width: 2.5vw;
     border-color: #818E87;
+    position: relative;
+    top: -1px;
   }
 
   .about-me__text-section {
@@ -739,5 +741,21 @@ body {
   .wrapper {
     height: 75px;
     width: 75px;
+  }
+
+  .landing-body {
+    position: absolute;
+    height: 100%;
+    top: 5vh;
+    background-color: #000;
+    color: #FFF;
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .landing-body__visible {
+    opacity: 1;
+    top: 0;
+    width: 100%;
   }
 }
