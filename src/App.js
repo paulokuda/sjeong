@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import  Landing from "./Landing";
 import Nda  from "./Nda";
 import './App.css';
@@ -44,9 +44,20 @@ const ALL_PROJECTS = [
   },
 ];
 
+const MOBILE_BREAKPOINT = 600;
+
 function App() {
-  const [showNda, setShowNda] = useState(true);
+  const [showNda, setShowNda] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [displayedProjects, setDisplayedProjects] = useState(ALL_PROJECTS);
+
+  const updateWindowDimensions = () => {
+    setWindowWidth(window.innerWidth);
+  }
+  
+  useEffect(() => {
+    window.addEventListener('resize', updateWindowDimensions);
+  })
   
   const setNdaViewCallback = (projectIndex) => {
     setShowNda(true);
@@ -56,7 +67,7 @@ function App() {
       setShowNda(false);
     }, 5000);
   }
-  return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} setNdaViewCallback={setNdaViewCallback} />;
+  return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} />;
 }
 
 export default App;
