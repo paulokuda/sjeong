@@ -119,7 +119,7 @@ body {
 }
 
 .about-me-panel__paralax {
-  transition: all 1.5s;
+  transition: all 1.25s;
 }
 
 .about-me__picture {
@@ -637,29 +637,29 @@ body {
   height: 150px;
 }
 
-.wrapper .pie {
+.wrapper > .pie {
   width: 50%;
   height: 100%;
   transform-origin: 100% 50%;
   position: absolute;
-  background: #08C;
+  background: #000;
   /* border: 5px solid rgba(0,0,0,0.5); */
 }
 
-.wrapper .spinner {
+.wrapper > .spinner {
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   z-index: 200;
   border-right: none;
   animation: rota 5s linear forwards;
 }
 
-.wrapper:hover .spinner,
-.wrapper:hover .filler,
-.wrapper:hover .mask {
+.wrapper:hover > .spinner,
+.wrapper:hover > .filler,
+.wrapper:hover > .mask {
   animation-play-state: running;
 }
 
-.wrapper .filler {
+.wrapper > .filler {
   border-radius: 0 100% 100% 0 / 0 50% 50% 0;
   left: 50%;
   opacity: 0;
@@ -668,7 +668,7 @@ body {
   border-left: none;
 }
 
-.wrapper .mask {
+.wrapper > .mask {
   width: 50%;
   height: 100%;
   position: absolute;
@@ -693,4 +693,25 @@ body {
   50%, 100% {
     opacity: 1;
   }
+}
+
+.nda-photo__tear-initial {
+  top: 43%;
+  background: url('./tear.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  left: 51.5%;
+  transition: all 1s;
+  visibility: hidden;
+}
+
+.nda-photo__tear {
+  visibility: visible;
+  top: 44%;
+  /* width: 15vw;
+  /* border-style: solid;
+  border-width: 2.5vw;
+  border-color: #818E87; */
 }

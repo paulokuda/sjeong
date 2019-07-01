@@ -9,12 +9,14 @@ const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div>
 function Nda(props) {
     const [currentNdaElements, setCurrentNdaElements] = useState([]);
     const [ndaRowCount, setNdaRowCount] = useState(0);
+    const [showFaceTear, setShowFaceTear] = useState(false);
 
     
     let renderInterval;
     useEffect(() => {
         setNdaRowCount(Math.round(window.innerHeight / 150) + 1);
         renderInterval = setInterval(renderNda, 200);
+        setTimeout(() => setShowFaceTear(true), 5000);
     });
     
     function renderNda() {
@@ -47,6 +49,7 @@ function Nda(props) {
                             <div class="pie filler"></div>
                             <div class="mask"></div>
                         </div>
+                        <div className={`nda-photo__tear-initial ${showFaceTear ? "nda-photo__tear" : ""}`} />
                     </div>
                     <span className="nda-message-me">[MESSAGE ME]</span>
                 </div>
