@@ -68,46 +68,46 @@ function Landing(props) {
       ) : null}
       <ParallaxProvider>
         <Parallax>
-          <div ref={landingWrapperRef} className="landing-wrapper">
-            <div className={`landing-page ${showInstagramBackground ? "landing-page__ig-bg" : ""}`}>
-              <div className="landing-content-container">
-                <div className="nav-container">
-                  <div className="nav-block">INFO</div>
-                  <div className="nav-block nav-center-block">
-                    <div>STEPH JEONG PORTFOLIO</div>
-                    <div>&#169;2019 ALL RIGHTS RESERVED</div>
+            <div ref={landingWrapperRef} className="landing-wrapper">
+              <div className={`landing-page ${showInstagramBackground ? "landing-page__ig-bg" : ""}`}>
+                <div className="landing-content-container">
+                  <div className="nav-container">
+                    <div className="nav-block">INFO</div>
+                    <div className="nav-block nav-center-block">
+                      <div>STEPH JEONG PORTFOLIO</div>
+                      <div>&#169;2019 ALL RIGHTS RESERVED</div>
+                    </div>
+                    <div className="nav-block nav-right-block">
+                      <FlashingText>(SCROLL) &#8595;</FlashingText>
+                    </div>
                   </div>
-                  <div className="nav-block nav-right-block">
-                    <FlashingText>(SCROLL) &#8595;</FlashingText>
+                  <div className="name-banner banner-text">
+                    <div>STEPH JEONG</div>
+                    <div>DESIGNER</div>
+                    <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="name-banner banner-text">
-                  <div>STEPH JEONG</div>
-                  <div>DESIGNER</div>
-                  <div>BK, NY &#169;2019</div>
-                </div>
-              </div>
-              <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></div>
-              <div className="about-me-footer">
-                <div className="about-me-footer__section">
-                  <div>EMAIL</div>
-                  <div>[JEONGSTEPH@GMAIL.COM]</div>
-                </div>
-                <div className="about-me-footer__section">
-                  <div onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}>TWITTER</div>
-                  <div>[@JEONGSTEPH]</div>
-                </div>
-                <div className="about-me-footer__section">
-                  <div>INSTAGRAM</div>
-                  <div>[@JEONGSTEPH]</div>
-                </div>
-                <div className="about-me-footer__section">
-                  <div>DRIBBBLE</div>
-                  <div>[@JEONGSTEPH]</div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></div>
+                <div className="about-me-footer">
+                  <div className="about-me-footer__section">
+                    <div>EMAIL</div>
+                    <div>[JEONGSTEPH@GMAIL.COM]</div>
+                  </div>
+                  <div className="about-me-footer__section">
+                    <div onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}>TWITTER</div>
+                    <div>[@JEONGSTEPH]</div>
+                  </div>
+                  <div className="about-me-footer__section">
+                    <div>INSTAGRAM</div>
+                    <div>[@JEONGSTEPH]</div>
+                  </div>
+                  <div className="about-me-footer__section">
+                    <div>DRIBBBLE</div>
+                    <div>[@JEONGSTEPH]</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </Parallax>
         <Parallax className="about-me-panel__paralax" y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "92vw" : "50vw", position: "absolute", top: getTopValue(), right: 0 }}>
           <div className="about-me-panel">

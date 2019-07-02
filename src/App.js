@@ -9,7 +9,7 @@ const ALL_PROJECTS = [
     y: ["550px", "-530px"],
     styleOuter: {
         width: "30vw",
-        height: "40vw",
+        height: "40vh",
         position: "absolute",
         top: "40vw",
         right: "7.5vw",
@@ -22,7 +22,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["1350px", "-830px"],
     y: ["1850px", "-1530px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vw", left: "5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__01",
     imageClassName: "first-project-image",
@@ -31,7 +31,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["1700px", "-1030px"],
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vw", left: "-5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vh", left: "-5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__03",
     imageClassName: "third-project-image",
@@ -40,7 +40,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["1800px", "-130px"],
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vw", right: "7.5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vh", right: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__02",
     imageClassName: "second-project-image",
@@ -49,7 +49,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["2200px", "-830px"],
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "80vw", right: "7.5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "80vh", right: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__05",
     imageClassName: "fifth-project-image",
@@ -80,7 +80,7 @@ function App() {
       setShowNda(false);
     }, 6500);
   }
-  return showNda ? <Nda /> : <div className="landing-main-wrapper"><Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} /></div>;
+  return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} />;
 }
 
 export default App;
