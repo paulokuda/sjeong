@@ -125,7 +125,7 @@ function Landing(props) {
           </div>
         </Parallax>
       </ParallaxProvider>
-      <div style={{ position: "relative"}}>
+      <div className={`client-wrapper ${slideInLanding ? "client-wrapper__after" : ""}`}>
         <ParallaxProvider>
           <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative", bottom: props.isMobileScreen ? 0 : "none" }}>
             <div className="client-landing__item">CLIENTS &#8595;</div>
