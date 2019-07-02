@@ -111,6 +111,11 @@ body {
   height: 120vw;
 }
 
+.landing-page__ig-bg {
+  background: url('./ig_hover_bg.png') no-repeat center center #e2e1da;
+  background-size: 100% 100%;
+}
+
 .about-me__about {
   padding: 2.5vw 0vw 2.5vw 2.5vw;
   font-size: 2vw;
