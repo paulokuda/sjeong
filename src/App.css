@@ -495,7 +495,7 @@ body {
 
   .landing-wrapper {
     position: relative;
-    padding: 2.5vw;
+    padding: 4vw;
   }
 
   .nav-center-block {
@@ -535,7 +535,7 @@ body {
 
   .collab-blurb {
     text-align: right;
-    padding-right: 5vw;
+    right: 4vw;
     position: absolute;
     bottom: 15vw;
     width: 90vw;
@@ -543,17 +543,17 @@ body {
   }
 
   .collab-blurb-hello {
-    color: #E44A1B;
+    color: #262626;
   }
 
   .banner-text {
-    font-size: 10vw;
-    line-height: 9vw;
-    letter-spacing: -0.4vw;
+    font-size: 12vw;
+    line-height: 11vw;
+    letter-spacing: -0.5vw;
   }
 
   .name-banner {
-    padding: 2.5vw 5vw;
+    padding: 2.5vw 4vw;
     color: #262626;
   }
 
@@ -565,8 +565,8 @@ body {
   }
 
   .about-me__about {
-    padding: 2.5vw 0vw 2.5vw 2.5vw;
-    font-size: 2vw;
+    padding: 4vw 0vw 4vw 4vw;
+    font-size: 6vw;
     color: #fff;
     background: #818E87;
   }
@@ -578,21 +578,20 @@ body {
   .about-me__picture {
     background: url('./steph_grain_green.png') no-repeat center center;
     background-size: 100% 100%;
-    height: 85vw;
-    width: 85vw;
+    height: 84vw;
+    width: 84vw;
     border-style: solid;
-    border-width: 2.5vw;
+    border-width: 4vw;
     border-color: #818E87;
     position: relative;
-    top: -1px;
   }
 
   .about-me__text-section {
-    padding: 0vw 2.5vw 5vw 2.5vw;
+    padding: 0vw 4vw 4vw 4vw;
     color: #fff;
     background: #818E87;
-    font-size: 1.6vw;
-    line-height: 2vw;
+    font-size: 5vw;
+    line-height: 6vw;
     letter-spacing: -0.03vw;
   }
 
@@ -600,11 +599,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 10vw;
-    line-height: 9vw;
+    font-size: 12vw;
+    line-height: 11vw;
     width: 100%;
     top: 0;
-    padding: 2.5vw 0vw 2.5vw 0vw;
+    padding: 4vw 0vw;
     text-transform: uppercase;
     letter-spacing: -0.36vw;
     z-index: -1;
@@ -632,7 +631,7 @@ body {
   }
 
   .client-list-message-me {
-    color: #e44a1b;
+    color: #d7d7d7;
   }
 
   .client-project-card__01 {
@@ -656,9 +655,9 @@ body {
   }
 
   .client-project-number {
-    font-size: 2vw;
-    width: 52vw;
-    padding: 2vw;
+    font-size: 4vw;
+    width: 60vw;
+    padding: 4vw;
     bottom: 0;
     background-color: #000;
     text-transform: uppercase;
@@ -666,52 +665,43 @@ body {
     color: #fff;
   }
 
-  .client-project-image {
-    top: 0;
-    right: 0;
-    background: url('./Steph_pixel.png') no-repeat center center;
-    background-size: 100% 100%;
-    height: 40vw;
-    width: 30vw;
-  }
-
   .first-project-image {
     background: url('./first-project.png') no-repeat center center;
     background-size: 100% 100%;
-    height: 52vw;
-    width: 52vw;
+    height: 60vw;
+    width: 60vw;
     border-style: solid;
-    border-width: 2vw;
+    border-width: 4vw;
     border-color: #000;
   }
 
   .second-project-image {
     background: url('./second-project.png') no-repeat center center;
     background-size: 100% 100%;
-    height: 52vw;
-    width: 52vw;
+    height: 60vw;
+    width: 60vw;
     border-style: solid;
-    border-width: 2vw;
+    border-width: 4vw;
     border-color: #000;
   }
 
   .third-project-image {
     background: url('./third-project.png') no-repeat center center;
     background-size: 100% 100%;
-    height: 52vw;
-    width: 52vw;
+    height: 60vw;
+    width: 60vw;
     border-style: solid;
-    border-width: 2vw;
+    border-width: 4vw;
     border-color: #000;
   }
 
   .fourth-project-image {
     background: url('./fourth-project.png') no-repeat center center;
     background-size: 100% 100%;
-    height: 52vw;
-    width: 52vw;
+    height: 60vw;
+    width: 60vw;
     border-style: solid;
-    border-width: 2vw;
+    border-width: 4vw;
     border-color: #000;
   }
 
@@ -721,7 +711,7 @@ body {
     height: 52vw;
     width: 52vw;
     border-style: solid;
-    border-width: 2vw;
+    border-width: 4vw;
     border-color: #000;
   }
 
@@ -763,3 +753,4 @@ body {
     width: 100%;
   }
 }
+
