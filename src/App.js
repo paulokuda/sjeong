@@ -10,7 +10,7 @@ const ALL_PROJECTS = [
         width: "30vw",
         height: "40vw",
         position: "absolute",
-        top: "65vw",
+        top: "40vw",
         right: "7.5vw",
     },
     styleInner: { background: "#dbe2e5" },
@@ -36,11 +36,19 @@ const ALL_PROJECTS = [
   },
   {
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "90vw", left: "7.5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vw", right: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__02",
     imageClassName: "second-project-image",
     projectNumber: 2,
+  },
+    {
+    y: ["700px", "-1030px"],
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "80vw", right: "7.5vw" },
+    styleInner: { background: "#dbe2e5" },
+    className: "client-project-card__05",
+    imageClassName: "fifth-project-image",
+    projectNumber: 5,
   },
 ];
 

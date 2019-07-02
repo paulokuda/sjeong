@@ -108,7 +108,7 @@ function Landing(props) {
             </div>
           </div>
         </Parallax>
-        <Parallax className="about-me-panel__paralax" y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "90vw" : "50vw", position: "absolute", top: getTopValue(), right: 0 }}>
+        <Parallax className="about-me-panel__paralax" y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "92vw" : "50vw", position: "absolute", top: getTopValue(), right: 0 }}>
           <div className="about-me-panel">
             <div className="about-me__about">&#8627; ABOUT </div>
             <div className="about-me__picture"/>
