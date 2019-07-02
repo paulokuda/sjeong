@@ -5,6 +5,7 @@ import './App.css';
 
 const ALL_PROJECTS = [
   {
+    mobileY: ["50px", "-530px"],
     y: ["550px", "-530px"],
     styleOuter: {
         width: "30vw",
@@ -19,6 +20,7 @@ const ALL_PROJECTS = [
     imageClassName: "fourth-project-image",
   },
   {
+    mobileY: ["1350px", "-830px"],
     y: ["1850px", "-1530px"],
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vw", left: "5vw" },
     styleInner: { background: "#dbe2e5" },
@@ -27,6 +29,7 @@ const ALL_PROJECTS = [
     projectNumber: 1,
   },
   {
+    mobileY: ["1700px", "-1030px"],
     y: ["700px", "-1030px"],
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vw", left: "-5vw" },
     styleInner: { background: "#dbe2e5" },
@@ -35,6 +38,7 @@ const ALL_PROJECTS = [
     projectNumber: 3,
   },
   {
+    mobileY: ["1800px", "-130px"],
     y: ["700px", "-1030px"],
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vw", right: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
@@ -42,7 +46,8 @@ const ALL_PROJECTS = [
     imageClassName: "second-project-image",
     projectNumber: 2,
   },
-    {
+  {
+    mobileY: ["2200px", "-830px"],
     y: ["700px", "-1030px"],
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "80vw", right: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
