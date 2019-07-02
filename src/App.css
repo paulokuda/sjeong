@@ -45,7 +45,6 @@ body {
   font-size: 1vw;
   line-height: 1.4vw;
   letter-spacing: -0.02vw;
-  color: #262626;
 }
 
 .nav-block {
@@ -481,7 +480,9 @@ body {
 }
 
 .client-wrapper {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   opacity: 0;
   transition: all 2s;
   z-index: -1;
@@ -489,6 +490,22 @@ body {
 
 .client-wrapper__after {
   opacity: 1;
+}
+
+.client-wrapper-nav {
+  color: #fff;
+  position: absolute;
+  top: 2vh;
+  left: 0;
+  right: 0;
+}
+
+.client-landing__projects-text {
+  font-size: 2vw;
+  position: absolute;
+  right: 5px;
+  bottom: 40vh;
+  transform: rotate(90deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -585,10 +602,6 @@ body {
     font-size: 6vw;
     color: #fff;
     background: #818E87;
-  }
-
-  .about-me-panel {
-
   }
 
   .about-me__picture {

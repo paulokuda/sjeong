@@ -128,6 +128,17 @@ function Landing(props) {
       <div className={`client-wrapper ${slideInLanding ? "client-wrapper__after" : ""}`}>
         <ParallaxProvider>
           <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative", bottom: props.isMobileScreen ? 0 : "none" }}>
+            <div className="nav-container client-wrapper-nav">
+              <div className="nav-block">CLIENTS</div>
+              <div className="nav-block nav-center-block">
+                <div>STEPH JEONG PORTFOLIO</div>
+                <div>&#169;2019 ALL RIGHTS RESERVED</div>
+              </div>
+              <div className="nav-block nav-right-block">
+                &#169;2019
+              </div>
+            </div>
+            <div className="client-landing__projects-text">Projects (2016 - 2019)</div>
             <div className="client-landing__item">CLIENTS &#8595;</div>
             <div className="client-landing__item">FACEBOOK</div>
             <div className="client-landing__item">Samsung</div>
