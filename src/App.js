@@ -80,7 +80,7 @@ function App() {
       setShowNda(false);
     }, 6500);
   }
-  return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} />;
+  return showNda ? <Nda /> : <div className="landing-main-wrapper"><Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} /></div>;
 }
 
 export default App;

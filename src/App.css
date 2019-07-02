@@ -111,6 +111,10 @@ body {
   height: 120vw;
 }
 
+.landing-main-wrapper {
+  height: calc(120vw + 110vh);
+}
+
 .landing-page__ig-bg {
   background: url('./ig_hover_bg.png') no-repeat center center #e2e1da;
   background-size: 100% 100%;
