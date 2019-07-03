@@ -60,9 +60,8 @@ const ALL_PROJECTS = [
 const MOBILE_BREAKPOINT = 600;
 
 function App() {
-  const [showNda, setShowNda] = useState(false);
+  const [showNda, setShowNda] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [displayedProjects, setDisplayedProjects] = useState(ALL_PROJECTS);
 
   const updateWindowDimensions = () => {
     setWindowWidth(window.innerWidth);
@@ -72,15 +71,9 @@ function App() {
     window.addEventListener('resize', updateWindowDimensions);
   })
   
-  const setNdaViewCallback = (projectIndex) => {
-    setShowNda(true);
-    displayedProjects.splice(projectIndex, 1);
-    setDisplayedProjects([...displayedProjects]);
-    setTimeout(() => {
-      setShowNda(false);
-    }, 6500);
-  }
-  return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} />;
+  const toggleNdaViewCallback = () => setShowNda(!showNda);
+
+  return showNda ? <Nda toggleNdaViewCallback={toggleNdaViewCallback} /> : <Landing displayedProjects={ALL_PROJECTS} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} toggleNdaViewCallback={toggleNdaViewCallback} />;
 }
 
 export default App;

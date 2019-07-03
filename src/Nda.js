@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 
 import './App.css';
+import FlashingText from "./FlashingText";
 
-const NDA_COUNT = 50;
+const NDA_COUNT = 25;
 
 const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div></div>);
 
@@ -14,7 +15,7 @@ function Nda(props) {
     let renderInterval;
     useEffect(() => {
         renderInterval = setInterval(renderNda, 100);
-        setTimeout(() => setShowFaceTear(true), 5000);
+        setShowFaceTear(true);
     }, []);
     
     function renderNda() {
@@ -38,13 +39,15 @@ function Nda(props) {
                         <div>TWITTER [@JEONGSTEPH]</div>
                         <div>INSTAGRAM [@JEONGSTEPH]</div>
                     </div>
-                    <div className="nda-header__right">&#169; 2019</div>
+                    <div className="nda-header__right">
+                        <FlashingText className="nda-header-close-button" onClick={props.toggleNdaViewCallback}>[CLOSE]</FlashingText>
+                    </div>
                 </div>
                 <div className="nda-body">
                     <div className="nda-photo">
                         <div className={`nda-photo__tear-initial ${showFaceTear ? "nda-photo__tear" : ""}`} />
                     </div>
-                    <span className="nda-message-me">[MESSAGE ME]</span>
+                    <span className="nda-message-me">[ENTER PASSWORD]</span>
                 </div>
             </div>
         </div>

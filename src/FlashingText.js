@@ -8,9 +8,9 @@ function FlashingText(props) {
     useEffect(() => {
         const interval = setInterval(toggleBlinkingState, 300);
         return () => clearInterval(interval);
-    })
+    });
     
-    return <span className={`${!isShowing ? "flashing-text__hidden" : ""} ${props.className}`}>{props.children}</span>;
+    return <span onClick={props.onClick} className={`${!isShowing ? "flashing-text__hidden" : ""} ${props.className !== undefined ? props.className : ""}`}>{props.children}</span>;
 }
 
 export default FlashingText;

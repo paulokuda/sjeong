@@ -360,7 +360,7 @@ body {
 }
 
 .flashing-text__hidden {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .twitter-card {
@@ -427,6 +427,10 @@ body {
   right: 5px;
   bottom: 40vh;
   transform: rotate(90deg);
+}
+
+.nda-header-close-button {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
