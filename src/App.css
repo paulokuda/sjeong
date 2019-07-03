@@ -116,14 +116,19 @@ body {
 }
 
 .about-me__about {
-  padding: 2.5vw 0vw 2.5vw 2.5vw;
+  padding: 2.5vw 2.5vw 2.5vw 2.5vw;
   font-size: 2vw;
   color: #fff;
   background: #818E87;
+  width: 100%;
 }
 
 .about-me-panel__paralax {
   transition: all 0.6s;
+}
+
+.about-me-panel {
+  width: 45vw;
 }
 
 .about-me__picture {
@@ -143,6 +148,7 @@ body {
   font-size: 1.6vw;
   line-height: 2vw;
   letter-spacing: -0.03vw;
+  width: 100%;
 }
 
 .client-landing {
@@ -364,12 +370,14 @@ body {
 }
 
 .twitter-card {
-  width: 500px;
-  font-size: 2vw;
+  width: 45vw;
+  height: 20vw;
+  font-size: 3vw;
+  letter-spacing: -0.04vw;
   position: fixed;
-  padding: 20px;
-  top: 200px;
-  left: 100px;
+  padding: 2.5vw;
+  top: 30vh;
+  left: -7vw;
   background: #E44A1B;
   z-index: 1;
   color: #e2e1da;
@@ -380,7 +388,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 9vw;
 }
 
 .wrapper {
@@ -494,14 +502,18 @@ body {
   top: 2vh;
   left: 0;
   right: 0;
+  font-size: 2vw;
+  vertical-align: baseline;
+  letter-spacing: -0.02vw;
 }
 
 .client-landing__projects-text {
   font-size: 2vw;
   position: absolute;
-  right: 5px;
-  bottom: 40vh;
+  right: -7.5vw;
+  bottom: 50%;
   transform: rotate(90deg);
+  letter-spacing: -0.02vw;
 }
 
 @media screen and (max-width: 600px) {

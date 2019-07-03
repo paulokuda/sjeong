@@ -78,7 +78,7 @@ function Landing(props) {
                       <div>&#169;2019 ALL RIGHTS RESERVED</div>
                     </div>
                     <div className="nav-block nav-right-block">
-                      <FlashingText>(SCROLL) &#8595;</FlashingText>
+                      <div>(SCROLL) &#8595;</div>
                     </div>
                   </div>
                   <div className="name-banner banner-text">
