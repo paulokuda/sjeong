@@ -391,13 +391,6 @@ body {
   width: 10px;
   position: absolute;
   left: 51.5%;
-  transition: all 1s;
-  visibility: hidden;
-}
-
-.nda-photo__tear {
-  visibility: visible;
-  top: 48%;
 }
 
 .client-wrapper {
