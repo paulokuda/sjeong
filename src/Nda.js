@@ -42,11 +42,6 @@ function Nda(props) {
                 </div>
                 <div className="nda-body">
                     <div className="nda-photo">
-                        <div className="wrapper">
-                            <div className="pie spinner"></div>
-                            <div className="pie filler"></div>
-                            <div className="mask"></div>
-                        </div>
                         <div className={`nda-photo__tear-initial ${showFaceTear ? "nda-photo__tear" : ""}`} />
                     </div>
                     <span className="nda-message-me">[MESSAGE ME]</span>
