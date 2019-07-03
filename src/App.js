@@ -5,13 +5,13 @@ import './App.css';
 
 const ALL_PROJECTS = [
   {
-    mobileY: ["50px", "-530px"],
+    mobileY: ["50px", "-60px"],
     y: ["550px", "-530px"],
     styleOuter: {
         width: "30vw",
         height: "40vh",
         position: "absolute",
-        top: "40vw",
+        top: "80vh",
         right: "7.5vw",
     },
     styleInner: { background: "#dbe2e5" },
@@ -19,7 +19,7 @@ const ALL_PROJECTS = [
     projectNumber: 4,
     imageClassName: "fourth-project-image",
   },
-  {
+  { 
     mobileY: ["1350px", "-830px"],
     y: ["1850px", "-1530px"],
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "5vw" },
@@ -29,18 +29,18 @@ const ALL_PROJECTS = [
     projectNumber: 1,
   },
   {
-    mobileY: ["1700px", "-1030px"],
+    mobileY: ["1700px", "-1130px"],
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vh", left: "-5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "60vh", left: "-5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__03",
     imageClassName: "third-project-image",
     projectNumber: 3,
   },
   {
-    mobileY: ["1800px", "-130px"],
+    mobileY: ["1800px", "-230px"],
     y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vh", right: "7.5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "30vh", right: "0vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__02",
     imageClassName: "second-project-image",
@@ -48,8 +48,8 @@ const ALL_PROJECTS = [
   },
   {
     mobileY: ["2200px", "-830px"],
-    y: ["700px", "-1030px"],
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "80vh", right: "7.5vw" },
+    y: ["700px", "-530px"],
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "120vh", left: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__05",
     imageClassName: "fifth-project-image",
@@ -82,5 +82,6 @@ function App() {
   }
   return showNda ? <Nda /> : <Landing displayedProjects={displayedProjects} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} setNdaViewCallback={setNdaViewCallback} />;
 }
+
 
 export default App;
