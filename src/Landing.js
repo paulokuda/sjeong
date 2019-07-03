@@ -9,6 +9,7 @@ function Landing(props) {
   const [showInstagramBackground, setShowInstagramBackground] = useState(false);
   const [slideInLanding, setSlideInLanding] = useState(false);
   const [projectBackBgIndex, setProjectBackBgIndex] = useState(-1);
+  const [showFaceMask, setShowFaceMask] = useState(false);
   const landingWrapperRef = useRef(null);
 
   useEffect(() => {
@@ -116,7 +117,9 @@ function Landing(props) {
         <Parallax className="about-me-panel__paralax" y={["550px", "-1850px"]} styleOuter={{ width: props.isMobileScreen ? "92vw" : "50vw", position: "absolute", top: getTopValue(), right: 0 }}>
           <div className="about-me-panel">
             <div className="about-me__about">&#8627; ABOUT </div>
-            <div className="about-me__picture"/>
+            <div className="about-me__picture" onMouseEnter={() => setShowFaceMask(true)} onMouseLeave={() => setShowFaceMask(false)}>
+              <div className={`about-me__picture-mask ${showFaceMask ? "about-me__picture-mask_visible" : ""}`} />
+            </div>
             <div className="about-me__text-section">
               My name is Steph Jeong, and I’m a digital designer who specializes in product, but dabbles in all things creative. I was born in Seoul, Korea, where Gangnam Style was based in. In my puberty days, my family moved to a small town in Georgia until I went off to Carnegie Mellon University to study communication design. Now, I’m happily living in Brooklyn, NY.
               <br></br>

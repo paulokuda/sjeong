@@ -393,6 +393,21 @@ body {
   left: 51.5%;
 }
 
+.about-me__picture-mask {
+  top: 24%;
+  background: url('./steph_face_mask.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 125px;
+  width: 100px;
+  position: absolute;
+  left: 55%;
+  visibility: hidden;
+}
+
+.about-me__picture-mask_visible {
+  visibility: visible;
+}
+
 .client-wrapper {
   position: absolute;
   left: 0;
