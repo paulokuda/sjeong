@@ -10,11 +10,15 @@ function Landing(props) {
   const [slideInLanding, setSlideInLanding] = useState(false);
   const [projectBackBgIndex, setProjectBackBgIndex] = useState(-1);
   const landingWrapperRef = useRef(null);
-  const landingBodyRef = useRef(null);
 
   useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+  
+  useEffect(() => {
     setSlideInLanding(true);
-    // setLandingPageHeight(landingWrapperRef.current.clientHeight);
     
     document.addEventListener("scroll", () => {
       if (isElementOutOfViewport(landingWrapperRef.current) && isLandingInView) {
@@ -54,7 +58,7 @@ function Landing(props) {
   }
   
   return (
-    <div ref={landingBodyRef} className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
+    <div className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
       {showTwitterCard ? (
         <div className="twitter-card">
           <div>
