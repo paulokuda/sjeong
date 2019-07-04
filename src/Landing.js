@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import GlitchEffect from 'react-glitch-effect';
 import './App.css';
 import FlashingText from './FlashingText';
 
@@ -165,7 +166,9 @@ function Landing(props) {
           {props.displayedProjects.map((project, index) => (
             <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={{ ...project.styleOuter, width: props.isMobileScreen ? "60vw" : project.styleOuter.width, height: props.isMobileScreen ? "80vw" : project.styleOuter.height }} styleInner={project.styleInner}>
               <div onMouseEnter={() => handleProjectCardMouseEnter(index)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
-                <div className={`${projectBackBgIndex === index ? "client-project-image__black-bg" : ""} ${project.imageClassName} client-project-card__image`} />
+                <GlitchEffect onHover={true}>
+                  <div className={project.imageClassName} />
+                </GlitchEffect>
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
               </div>
           </Parallax>
