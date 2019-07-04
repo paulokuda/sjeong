@@ -156,7 +156,7 @@ function Landing(props) {
             <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
           {props.displayedProjects.map((project, index) => (
-            <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={{ ...project.styleOuter, width: props.isMobileScreen ? "60vw" : project.styleOuter.width, height: props.isMobileScreen ? "80vw" : project.styleOuter.height }} styleInner={project.styleInner}>
+            <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
               <div onMouseEnter={() => handleProjectCardMouseEnter(index)} className={`client-project-card ${project.className}`} onClick={() => props.setNdaViewCallback(index)}>
                 <div className={`${projectBackBgIndex === index ? "client-project-image__black-bg" : ""} ${project.imageClassName} client-project-card__image`} />
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
