@@ -91,6 +91,10 @@ body {
   color: #E44A1B;
 }
 
+a: link, a:visited {
+  text-decoration: none;
+}
+
 .banner-text {
   font-size: 10vw;
   line-height: 9vw;
@@ -110,7 +114,6 @@ body {
 }
 
 .landing-page__ig-bg {
-  background-color: #e2e1da;
   background-size: 50% 50%;
 }
 
@@ -119,7 +122,7 @@ body {
   background: url('./instagram_photo1.png') no-repeat center center;
   background-size: 100% 100%;
   top: 75vh;
-  left: 20vw;
+  left: 5vw;
   height: 25vw;
   width: 25vw;
 }
@@ -128,8 +131,8 @@ body {
   position: absolute;
   background: url('./instagram_photo2.png') no-repeat center center;
   background-size: 100% 100%;
-  top: 90vh;
-  left: 45vw;
+  top: 50vh;
+  left: 35vw;
   height: 25vw;
   width: 25vw;
 }
@@ -150,10 +153,12 @@ body {
   color: #fff;
   background: #818E87;
   width: 100%;
+  margin-bottom: -1px;
 }
 
 .about-me-panel__paralax {
   transition: all 0.6s;
+  height: 100%;
 }
 
 .about-me-panel {
@@ -381,7 +386,7 @@ body {
 }
 
 .nda-photo {
-  background: url('./steph_grain_green.png') no-repeat center center;
+  background: url('./steph_noise.png') no-repeat center center;
   background-size: 100% 100%;
   height: 25vw;
   width: 25vw;
@@ -389,7 +394,9 @@ body {
 }
 
 .nda-message-me {
-  padding-top: 50px;
+  padding-top: 2.55vw;
+  font-size: 2vw;
+  color: #fff;
 }
 
 .flashing-text__hidden {
@@ -397,33 +404,33 @@ body {
 }
 
 .twitter-card {
-  width: 45vw;
-  height: 20vw;
+  width: 40vw;
   font-size: 3vw;
   letter-spacing: -0.04vw;
+  transform: rotate(90deg);
   position: fixed;
   padding: 2.5vw;
-  top: 30vh;
-  left: -7vw;
+  left: -12vw;
+  bottom: 30vh;
   background: #E44A1B;
   z-index: 1;
   color: #e2e1da;
-  transform: rotate(90deg);
 }
 
 .twitter-card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 9vw;
+  padding-top: 2.5vw;
+ 
 }
 
 .nda-photo__tear-initial {
   top: 43%;
-  background: url('./tear.png') no-repeat center center;
+  background: url('./tear.svg') no-repeat center center;
   background-size: 100% 100%;
-  height: 20px;
-  width: 10px;
+  height: 1vw;
+  width: 0.5vw;
   position: absolute;
   left: 51.5%;
 }
@@ -575,6 +582,7 @@ body {
   .about-me-panel {
     width: 84vw;
   }
+
 
   .about-me__picture {
     background: url('./steph_grain_green.png') no-repeat center center;

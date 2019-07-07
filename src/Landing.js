@@ -88,7 +88,7 @@ function Landing(props) {
                     <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto: jeongsteph@gmail.com"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
                     <div>EMAIL</div>

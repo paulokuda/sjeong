@@ -43,11 +43,10 @@ function Nda(props) {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>{currentNdaElements}</div>
             <div className="nda-content">
                 <div className="nda-header">
-                    <div className="nda-header__left">[ERROR]</div>
+                    <div className="nda-header__left">ERROR</div>
                     <div className="nda-header__middle">
-                        <div>EMAIL [JEONGSTEPH@GMAIL.COM]</div>
-                        <div>TWITTER [@JEONGSTEPH]</div>
-                        <div>INSTAGRAM [@JEONGSTEPH]</div>
+                        <div>STEPH JEONG PORTFOLIO</div>
+                      <div>&#169;2019 ALL RIGHTS RESERVED</div>
                     </div>
                     <div className="nda-header__right">
                         <FlashingText className="nda-header-close-button" onClick={props.toggleNdaViewCallback}>[CLOSE]</FlashingText>
