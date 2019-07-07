@@ -11,7 +11,6 @@ body {
   position: absolute;
   height: 100%;
   top: 3vh;
-  background-color: #000;
   color: #FFF;
   transition: all 0.6s;
   opacity: 0;
@@ -322,12 +321,11 @@ body {
 
 .nda-flash-row {
   font-size: 10vw;
-  line-height: 9vw;
+  line-height: 8vw;
   width: 100%;
-  top: 0;
   text-transform: uppercase;
   letter-spacing: -0.36vw;
-  color: #d7d7d7;
+  color: #262626;
   overflow: hidden;
 
   display: flex;
@@ -349,6 +347,7 @@ body {
 .nda-header {
   display: flex;
   align-items: flex-end;
+  color: #fff;
 }
 
 .nda-header__middle {
@@ -359,12 +358,16 @@ body {
 
 .nda-header__left {
   flex: 1;
+  font-size: 2vw;
+  vertical-align: baseline;
 }
 
 .nda-header__right {
   display: flex;
   justify-content: flex-end;
   flex: 1;
+  font-size: 2vw;
+  vertical-align: baseline;
 }
 
 .nda-body {
@@ -477,25 +480,17 @@ body {
 
 @media screen and (max-width: 600px) {
 
-  body {
-    height: 100%;
-    font-family: 'NHaasGroteskPro', sans-serif;
-    background-color: #000;
-  }
-
   .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 4vw;
     font-size: 6vw;
-    vertical-align: baseline;
-    color: #262626;
   }
 
   .landing-wrapper {
-    position: relative;
     padding: 4vw;
+    width: 92vw;
+    background: none;
+    color: none;
+    opacity: 0%;
   }
 
   .nav-center-block {
@@ -565,10 +560,13 @@ body {
   }
 
   .about-me__about {
-    padding: 4vw 0vw 4vw 4vw;
+    padding: 4vw;
     font-size: 6vw;
-    color: #fff;
-    background: #818E87;
+    width: 84vw;
+  }
+
+  .about-me-panel {
+    width: 84vw;
   }
 
   .about-me__picture {
@@ -579,16 +577,28 @@ body {
     border-style: solid;
     border-width: 4vw;
     border-color: #818E87;
-    position: relative;
   }
 
   .about-me__text-section {
-    padding: 0vw 4vw 4vw 4vw;
-    color: #fff;
-    background: #818E87;
+    padding: 0vw 4vw 8vw 4vw;
     font-size: 5vw;
     line-height: 6vw;
     letter-spacing: -0.03vw;
+  }
+
+  .client-wrapper {
+    width: 92%;
+  }
+
+
+  .client-wrapper-nav {
+    color: #fff;
+    position: absolute;
+    top: 0vh;
+    padding: vw;
+    vertical-align: baseline;
+    letter-spacing: -0.02vw;
+    width: 92vw;
   }
 
   .client-landing {
