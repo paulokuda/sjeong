@@ -3,6 +3,7 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import GlitchEffect from 'react-glitch-effect';
 import './App.css';
 import FlashingText from './FlashingText';
+import firstPhotoUrl from "./first-project.png";
 
 function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
@@ -10,6 +11,7 @@ function Landing(props) {
   const [showInstagramBackground, setShowInstagramBackground] = useState(false);
   const [slideInLanding, setSlideInLanding] = useState(false);
   const [showFaceMask, setShowFaceMask] = useState(false);
+  const [glitchIndex, setShowGlitchIndex] = useState(-1);
   const landingWrapperRef = useRef(null);
 
   useEffect(() => {
@@ -155,10 +157,16 @@ function Landing(props) {
           </div>
           {props.displayedProjects.map((project, index) => (
             <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
-              <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
-                <GlitchEffect onHover={true}>
-                  <div className={project.imageClassName} />
-                </GlitchEffect>
+              <div onMouseEnter={() => setShowGlitchIndex(index)} onMouseLeave={() => setShowGlitchIndex(-1)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
+                  {index === glitchIndex ? (
+                    <div className="project-card-glitch-container">
+                      <GlitchEffect>
+                        <img src={firstPhotoUrl} />
+                      </GlitchEffect>
+                      </div>
+                  ) : (
+                    <img src={firstPhotoUrl} className={`${project.imageClassName} project-image-border`} />
+                  )}
                 <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
               </div>
           </Parallax>
