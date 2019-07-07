@@ -198,6 +198,8 @@ body {
 }
 
 .client-project-card {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   height: 40vw;
   width: 30vw;
@@ -623,6 +625,8 @@ body {
   }
 
   .client-project-card {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     height: 80vw;
     width: 60vw;
