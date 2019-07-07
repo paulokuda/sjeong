@@ -95,7 +95,7 @@ function Landing(props) {
                     <div>[JEONGSTEPH@GMAIL.COM]</div>
                   </div>
                   <div className="about-me-footer__section">
-                    <div onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}>TWITTER</div>
+                    <div>TWITTER</div>
                     <div>[@JEONGSTEPH]</div>
                   </div>
                   <div className="about-me-footer__section">
