@@ -483,8 +483,13 @@ body {
 @media screen and (max-width: 600px) {
 
   .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 4vw;
     font-size: 6vw;
+    vertical-align: baseline;
+    color: #262626;
   }
 
   .landing-wrapper {
@@ -597,7 +602,7 @@ body {
     color: #fff;
     position: absolute;
     top: 0vh;
-    padding: vw;
+    /* padding: vw; */
     vertical-align: baseline;
     letter-spacing: -0.02vw;
     width: 92vw;

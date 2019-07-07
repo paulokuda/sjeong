@@ -29,7 +29,7 @@ const ALL_PROJECTS = [
   { 
     mobileY: ["1350px", "-830px"],
     y: ["1850px", "-1530px"],
-    mobileStyleOuter: { width: "90vw", height: "100vw", position: "absolute", top: "25vh", left: "25vw" },
+    mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "85vh", left: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__01",
@@ -39,7 +39,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["1700px", "-1130px"],
     y: ["700px", "-1030px"],
-    mobileStyleOuter: { width: "90vw", height: "100vw", position: "absolute", top: "25vh", left: "25vw" },
+    mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "55vh", left: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "60vh", left: "-5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__03",
@@ -49,7 +49,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["1800px", "-230px"],
     y: ["700px", "-1030px"],
-    mobileStyleOuter: { width: "90vw", height: "100vw", position: "absolute", top: "25vh", right: "25vw" },
+    mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "20vh", right: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "30vh", right: "0vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__02",
@@ -59,7 +59,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["2200px", "-830px"],
     y: ["700px", "-530px"],
-    mobileStyleOuter: { width: "30vw", height: "100vw", position: "absolute", top: "25vh", left: "25vw" },
+    mobileStyleOuter: { width: "30vw", height: "100vw", position: "absolute", top: "35vh", left: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "120vh", left: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__05",
