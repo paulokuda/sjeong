@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import FlashingText from "./FlashingText";
 
-const NDA_COUNT = 25;
+const NDA_COUNT = 30;
 
 const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div></div>);
 

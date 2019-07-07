@@ -130,7 +130,7 @@ function Landing(props) {
       </ParallaxProvider>
       <div className={`client-wrapper ${slideInLanding ? "client-wrapper__after" : ""}`}>
         <ParallaxProvider>
-          <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative", bottom: props.isMobileScreen ? 0 : "none" }}>
+          <div className="client-landing" style={{ position: isLandingInView || props.isMobileScreen ? "fixed" : "relative" }}>
             <div className="nav-container client-wrapper-nav">
               <div className="nav-block">CLIENTS</div>
               <div className="nav-block nav-center-block">
@@ -158,22 +158,24 @@ function Landing(props) {
             <div className="client-landing__item">&You</div>
             <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
-          {props.displayedProjects.map((project, index) => (
-            <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
-              <div onMouseEnter={() => setShowGlitchIndex(index)} onMouseLeave={() => setShowGlitchIndex(-1)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
-                  {index === glitchIndex ? (
-                    <div className="project-card-glitch-container">
-                      <GlitchEffect>
-                        <img src={firstPhotoUrl} />
-                      </GlitchEffect>
-                      </div>
-                  ) : (
-                    <img src={firstPhotoUrl} className={`${project.imageClassName} project-image-border`} />
-                  )}
-                <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
-              </div>
-          </Parallax>
-          ))}
+          <div style={{ height: props.isMobileScreen ? "1350px" : "auto" }}>
+            {props.displayedProjects.map((project, index) => (
+              <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
+                <div onMouseEnter={() => setShowGlitchIndex(index)} onMouseLeave={() => setShowGlitchIndex(-1)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
+                    {index === glitchIndex ? (
+                      <div className="project-card-glitch-container">
+                        <GlitchEffect>
+                          <img src={firstPhotoUrl} />
+                        </GlitchEffect>
+                        </div>
+                    ) : (
+                      <img src={firstPhotoUrl} className={`${project.imageClassName} project-image-border`} />
+                    )}
+                  <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
+                </div>
+            </Parallax>
+            ))}
+          </div>
         </ParallaxProvider>
       </div>
     </div>

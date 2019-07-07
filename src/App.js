@@ -59,7 +59,7 @@ const ALL_PROJECTS = [
   {
     mobileY: ["2200px", "-830px"],
     y: ["700px", "-530px"],
-    mobileStyleOuter: { width: "30vw", height: "100vw", position: "absolute", top: "35vh", left: "25vw" },
+    mobileStyleOuter: { width: "30vw", height: "100vw", position: "absolute", top: "45vh", left: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "120vh", left: "7.5vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__05",
