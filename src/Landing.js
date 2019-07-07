@@ -9,7 +9,6 @@ function Landing(props) {
   const [showTwitterCard, setShowTwitterCard] = useState(false);
   const [showInstagramBackground, setShowInstagramBackground] = useState(false);
   const [slideInLanding, setSlideInLanding] = useState(false);
-  const [projectBackBgIndex, setProjectBackBgIndex] = useState(-1);
   const [showFaceMask, setShowFaceMask] = useState(false);
   const landingWrapperRef = useRef(null);
 
@@ -48,15 +47,6 @@ function Landing(props) {
       return "70vh";  
     }
     return "40vh";
-  }
-
-  const handleProjectCardMouseEnter = (index) => {
-    setProjectBackBgIndex(index);
-    setTimeout(removeProjectCardBlackBackground, 100);
-  }
-
-  const removeProjectCardBlackBackground = () => {
-    setProjectBackBgIndex(-1);
   }
   
   return (
@@ -165,7 +155,7 @@ function Landing(props) {
           </div>
           {props.displayedProjects.map((project, index) => (
             <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
-              <div onMouseEnter={() => handleProjectCardMouseEnter(index)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
+              <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
                 <GlitchEffect onHover={true}>
                   <div className={project.imageClassName} />
                 </GlitchEffect>
