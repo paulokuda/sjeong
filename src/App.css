@@ -111,8 +111,38 @@ body {
 }
 
 .landing-page__ig-bg {
-  background: url('./ig_hover_bg.png') no-repeat center center #e2e1da;
+  background-color: #e2e1da;
+  background-size: 50% 50%;
+}
+
+.landing-page__ig-bg-one {
+  position: absolute;
+  background: url('./instagram_photo1.png') no-repeat center center;
   background-size: 100% 100%;
+  top: 75vh;
+  left: 20vw;
+  height: 25vw;
+  width: 25vw;
+}
+
+.landing-page__ig-bg-two {
+  position: absolute;
+  background: url('./instagram_photo2.png') no-repeat center center;
+  background-size: 100% 100%;
+  top: 90vh;
+  left: 45vw;
+  height: 25vw;
+  width: 25vw;
+}
+
+.landing-page__ig-bg-three {
+  position: absolute;
+  background: url('./instagram_photo3.png') no-repeat center center;
+  background-size: 100% 100%;
+  bottom: 20vh;
+  left: 15vw;
+  height: 25vw;
+  width: 25vw;
 }
 
 .about-me__about {

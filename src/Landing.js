@@ -68,6 +68,9 @@ function Landing(props) {
         <Parallax>
             <div ref={landingWrapperRef} className="landing-wrapper">
               <div className={`landing-page ${showInstagramBackground ? "landing-page__ig-bg" : ""}`}>
+                <div className={`${showInstagramBackground ? "landing-page__ig-bg-one" : ""}`} />
+                <div className={`${showInstagramBackground ? "landing-page__ig-bg-two" : ""}`} />
+                <div className={`${showInstagramBackground ? "landing-page__ig-bg-three" : ""}`} />
                 <div className="landing-content-container">
                   <div className="nav-container">
                     <div className="nav-block">INFO</div>
