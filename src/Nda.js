@@ -9,7 +9,7 @@ const NDA_ELEMENT = (<div className="nda-flash-row"><div>NDA</div><div>NDA</div>
 
 function Nda(props) {
     const [currentNdaElements, setCurrentNdaElements] = useState([(<div className="nda-flash-row"><div>NDA</div><div>NDA</div></div>)]);
-    const [tearTop, setTearTop] = useState(42);
+    const [tearTop, setTearTop] = useState(35);
 
     let renderInterval;
     let tearInterval;
@@ -18,8 +18,8 @@ function Nda(props) {
         renderInterval = setInterval(renderNda, 100);
         tearInterval = setInterval(() => {
             setTearTop(tearTop => {
-                if (tearTop === 47) {
-                    return 42;
+                if (tearTop === 40) {
+                    return 35;
                 }
                 return tearTop + 1;
             });
