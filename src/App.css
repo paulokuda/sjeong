@@ -173,6 +173,7 @@ a: link, a:visited {
   border-style: solid;
   border-width: 2.5vw;
   border-color: #818E87;
+  position: relative;
 }
 
 .about-me__text-section {
@@ -448,13 +449,13 @@ a: link, a:visited {
 }
 
 .about-me__picture-mask {
-  top: 24%;
+  top: 33%;
+  left: 56%;
   background: url('./steph_face_mask.png') no-repeat center center;
   background-size: 100% 100%;
   height: 125px;
   width: 100px;
   position: absolute;
-  left: 55%;
   visibility: hidden;
 }
 
@@ -469,6 +470,7 @@ a: link, a:visited {
   opacity: 0;
   transition: all 2s;
   z-index: -1;
+  width: 100%;
 }
 
 .client-wrapper__after {
@@ -604,6 +606,7 @@ a: link, a:visited {
     border-style: solid;
     border-width: 4vw;
     border-color: #818E87;
+    position: relative;
   }
 
   .about-me__text-section {
