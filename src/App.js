@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import  Landing from "./Landing";
 import Nda  from "./Nda";
 import './App.css';
+import firstPhotoUrl from "./first-project.png";
+import secondPhotoUrl from "./second-project.png";
+import thirdPhotoUrl from "./third-project.png";
+import fourthPhotoUrl from "./fourth-project.png";
+import fifthPhotoUrl from "./fifth-project.png";
 
 const ALL_PROJECTS = [
   {
@@ -25,6 +30,7 @@ const ALL_PROJECTS = [
     className: "client-project-card__04",
     projectNumber: 4,
     imageClassName: "fourth-project-image",
+    imageUrl: fourthPhotoUrl,
   },
   { 
     mobileY: ["1350px", "-830px"],
@@ -35,6 +41,7 @@ const ALL_PROJECTS = [
     className: "client-project-card__01",
     imageClassName: "first-project-image",
     projectNumber: 1,
+    imageUrl: firstPhotoUrl,
   },
   {
     mobileY: ["1700px", "-1130px"],
@@ -45,6 +52,7 @@ const ALL_PROJECTS = [
     className: "client-project-card__03",
     imageClassName: "third-project-image",
     projectNumber: 3,
+    imageUrl: thirdPhotoUrl,
   },
   {
     mobileY: ["1800px", "-230px"],
@@ -55,6 +63,7 @@ const ALL_PROJECTS = [
     className: "client-project-card__02",
     imageClassName: "second-project-image",
     projectNumber: 2,
+    imageUrl: secondPhotoUrl,
   },
   {
     mobileY: ["2000px", "-830px"],
@@ -65,6 +74,7 @@ const ALL_PROJECTS = [
     className: "client-project-card__05",
     imageClassName: "fifth-project-image",
     projectNumber: 5,
+    imageUrl: fifthPhotoUrl,
   },
 ];
 

@@ -3,7 +3,6 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import GlitchEffect from 'react-glitch-effect';
 import './App.css';
 import FlashingText from './FlashingText';
-import firstPhotoUrl from "./first-project.png";
 
 function Landing(props) {
   const [isLandingInView, setLandingInView] = useState(true);
@@ -165,11 +164,11 @@ function Landing(props) {
                     {index === glitchIndex ? (
                       <div className="project-card-glitch-container">
                         <GlitchEffect>
-                          <img src={firstPhotoUrl} />
+                          <img src={project.imageUrl} />
                         </GlitchEffect>
                         </div>
                     ) : (
-                      <img src={firstPhotoUrl} className={`${project.imageClassName} project-image-border`} />
+                      <img src={project.imageUrl} className={`${project.imageClassName} project-image-border`} />
                     )}
                   <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
                 </div>
