@@ -158,7 +158,7 @@ function Landing(props) {
             <div className="client-landing__item">&You</div>
             <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
-          <div style={{ height: props.isMobileScreen ? "1150px" : "auto" }}>
+          <div style={{ height: props.isMobileScreen ? "800px" : "auto" }}>
             {props.displayedProjects.map((project, index) => (
               <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
                 <div onMouseEnter={() => setShowGlitchIndex(index)} onMouseLeave={() => setShowGlitchIndex(-1)} className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
