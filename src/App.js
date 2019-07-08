@@ -84,7 +84,12 @@ function App() {
   
   const toggleNdaViewCallback = () => setShowNda(!showNda);
 
-  return showNda ? <Nda toggleNdaViewCallback={toggleNdaViewCallback} /> : <Landing displayedProjects={ALL_PROJECTS} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} toggleNdaViewCallback={toggleNdaViewCallback} />;
+  return (
+    <>
+      <Nda isOpen={showNda} toggleNdaViewCallback={toggleNdaViewCallback} />
+      <Landing displayedProjects={ALL_PROJECTS} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} toggleNdaViewCallback={toggleNdaViewCallback} />
+    </>
+  );
 }
 
 

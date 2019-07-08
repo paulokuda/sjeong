@@ -39,7 +39,7 @@ function Nda(props) {
 
     
     return (
-        <div className="nda-main">
+        <div className={`nda-main ${props.isOpen ? "nda-main__visible" : ""}`}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>{currentNdaElements}</div>
             <div className="nda-content">
                 <div className="nda-header">
