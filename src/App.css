@@ -193,6 +193,7 @@ a: link, a:visited {
   line-height: 9vw;
   width: 100%;
   top: 0;
+  left: 0;
   padding: 2.5vw 0vw 2.5vw 0vw;
   text-transform: uppercase;
   letter-spacing: -0.36vw;
@@ -600,11 +601,6 @@ a: link, a:visited {
     line-height: 6vw;
     letter-spacing: -0.03vw;
   }
-
-  .client-wrapper {
-    width: 92%;
-  }
-
 
   .client-wrapper-nav {
     color: #fff;
