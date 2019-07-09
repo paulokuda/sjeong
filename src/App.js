@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import  Landing from "./Landing";
 import Nda  from "./Nda";
 import './App.css';
+import './styles.scss';
 import firstPhotoUrl from "./first-project.png";
 import secondPhotoUrl from "./second-project.png";
 import thirdPhotoUrl from "./third-project.png";

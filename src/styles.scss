@@ -1,0 +1,17 @@
+.client-project-card {
+    &:hover {
+        .project-card-glitch-container {
+            border-color: white;
+        }
+
+        .client-project-number {
+            background: white;
+            color: black;
+        }
+
+    }
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}

@@ -91,10 +91,6 @@ body {
   color: #E44A1B;
 }
 
-a: link, a:visited {
-  text-decoration: none;
-}
-
 .banner-text {
   font-size: 10vw;
   line-height: 9vw;
@@ -217,11 +213,6 @@ a: link, a:visited {
   border-color: white;
 }
 
-.client-project-card:hover > .client-project-number {
-  background: white;
-  color: black;
-}
-
 .orange-text {
   color: #e44a1b;
 }
@@ -265,30 +256,26 @@ a: link, a:visited {
   color: #fff;
 }
 
-.client-project-image {
-  top: 0;
-  right: 0;
-  background: url('./Steph_pixel.png') no-repeat center center;
-  background-size: 100% 100%;
-  height: 40vw;
-  width: 30vw;
-}
 
 .project-card-glitch-container {
-  height: 45vh;
-  width: 100%;
   border-style: solid;
   border-width: 2vw;
   border-color: white;
   overflow: hidden;
-}
-
-.project-image-border {
-  height: 45vh;
   width: 100%;
   border-style: solid;
   border-width: 2vw;
   border-color: black;
+  overflow: hidden;
+}
+
+.project-image-border {
+  border-style: solid;
+  border-width: 2vw;
+  border-color: black;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .first-project-image {
