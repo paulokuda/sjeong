@@ -119,19 +119,19 @@ a: link, a:visited {
 
 .landing-page__ig-bg-one {
   position: absolute;
-  background: url('./instagram_photo1.png') no-repeat center center;
+  background: url('./blkbox.png') no-repeat center center;
   background-size: 100% 100%;
-  top: 75vh;
-  left: 5vw;
+  bottom: 22%;
+  left: 15vw;
   height: 25vw;
   width: 25vw;
 }
 
 .landing-page__ig-bg-two {
   position: absolute;
-  background: url('./instagram_photo2.png') no-repeat center center;
+  background: url('./sad.png') no-repeat center center;
   background-size: 100% 100%;
-  top: 50vh;
+  top: 25%;
   left: 35vw;
   height: 25vw;
   width: 25vw;
@@ -139,10 +139,10 @@ a: link, a:visited {
 
 .landing-page__ig-bg-three {
   position: absolute;
-  background: url('./instagram_photo3.png') no-repeat center center;
+  background: url('./desktop.png') no-repeat center center;
   background-size: 100% 100%;
-  bottom: 20vh;
-  left: 15vw;
+  bottom: 38%;
+  left: 5vw;
   height: 25vw;
   width: 25vw;
 }

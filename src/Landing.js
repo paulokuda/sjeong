@@ -141,7 +141,7 @@ function Landing(props) {
               </div>
             </div>
             <div className="client-landing__projects-text">Projects (2016 - 2019)</div>
-            <div className="client-landing__item">CLIENTS &#8595;</div>
+            <div className="client-landing__item">CLIENTS&#8595;</div>
             <div className="client-landing__item">FACEBOOK</div>
             <div className="client-landing__item">Samsung</div>
             <div className="client-landing__item">Globo</div>
