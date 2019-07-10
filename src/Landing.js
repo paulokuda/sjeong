@@ -44,7 +44,7 @@ function Landing(props) {
       <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
           <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
             <div className="project-card-glitch-container">
-              <GlitchEffect onHover={true} duration="2s">
+              <GlitchEffect onHover={true} duration="1.5s">
                 <img src={project.imageUrl} className={project.imageClassName} />
               </GlitchEffect>
             </div>
