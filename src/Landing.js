@@ -178,20 +178,6 @@ function Landing(props) {
           ) : (
             parallaxProjects()
           )}
-          {/* <div style={{ height: props.isMobileScreen ? "600px" : "auto" }}>
-            {props.displayedProjects.map((project, index) => (
-              <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
-                  <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
-                    <div className="project-card-glitch-container">
-                      <GlitchEffect onHover={true} duration="3s">
-                        <img src={project.imageUrl} className={project.imageClassName} />
-                      </GlitchEffect>
-                    </div>
-                    <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
-                  </div>
-            </Parallax>
-            ))}
-          </div> */}
         </ParallaxProvider>
       </div>
     </div>
