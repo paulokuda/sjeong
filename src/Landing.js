@@ -157,7 +157,19 @@ function Landing(props) {
             <div className="client-landing__item">&You</div>
             <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
           </div>
-          <div style={{ height: props.isMobileScreen ? "400px" : "auto" }}>
+          {props.displayedProjects.map((project, index) => (
+              <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
+                  <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
+                    <div className="project-card-glitch-container">
+                      <GlitchEffect onHover={true} duration="2s">
+                        <img src={project.imageUrl} className={project.imageClassName} />
+                      </GlitchEffect>
+                    </div>
+                    <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
+                  </div>
+            </Parallax>
+            ))}
+          {/* <div style={{ height: props.isMobileScreen ? "600px" : "auto" }}>
             {props.displayedProjects.map((project, index) => (
               <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
                   <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
@@ -170,7 +182,7 @@ function Landing(props) {
                   </div>
             </Parallax>
             ))}
-          </div>
+          </div> */}
         </ParallaxProvider>
       </div>
     </div>

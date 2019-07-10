@@ -459,14 +459,8 @@ body {
 }
 
 .client-wrapper-nav {
+  width: 80vw;
   color: #fff;
-  position: absolute;
-  top: 2vh;
-  left: 0;
-  right: 0;
-  font-size: 2vw;
-  vertical-align: baseline;
-  letter-spacing: -0.02vw;
 }
 
 .client-landing__projects-text {
@@ -599,10 +593,6 @@ body {
 
   .client-wrapper-nav {
     color: #fff;
-    position: absolute;
-    top: 0vh;
-    vertical-align: baseline;
-    letter-spacing: -0.02vw;
     width: 92vw;
   }
 
