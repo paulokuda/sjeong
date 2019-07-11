@@ -11,7 +11,7 @@ import fifthPhotoUrl from "./fifth-project.png";
 
 const ALL_PROJECTS = [
   {
-    mobileY: ["50px", "-60px"],
+    mobileY: ["1250px", "-830px"],
     y: ["550px", "-530px"],
     styleOuter: {
         width: "30vw",
@@ -24,7 +24,7 @@ const ALL_PROJECTS = [
         width: "30vw",
         height: "40vh",
         position: "absolute",
-        top: "25vh",
+        top: "10vh",
         right: "40vw",
     },
     styleInner: { background: "#dbe2e5" },
@@ -34,7 +34,7 @@ const ALL_PROJECTS = [
     imageUrl: fourthPhotoUrl,
   },
   { 
-    mobileY: ["1350px", "-830px"],
+    mobileY: ["850px", "-830px"],
     y: ["1850px", "-1530px"],
     mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "85vh", left: "25vw" },
     styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "5vw" },
