@@ -23,7 +23,7 @@ function Nda(props) {
                 }
                 return tearTop + 1;
             });
-        }, 500);
+        }, 250);
         return () => {
             clearInterval(renderInterval);
             clearInterval(tearInterval);
