@@ -172,16 +172,18 @@ function Landing(props) {
           <div className="client-landing__item">&You</div>
           <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
         </div>
-        <ParallaxProvider>
-          {props.isMobileScreen ? (
-            <div className="client-projects-container">
-              {parallaxProjects()}
-            </div>
-          ) : (
-            parallaxProjects()
-          )}
-          {/* {parallaxProjects()} */}
-        </ParallaxProvider>
+        {!props.isMobileScreen && (
+          <ParallaxProvider>
+            {props.isMobileScreen ? (
+              <div className="client-projects-container">
+                {parallaxProjects()}
+              </div>
+            ) : (
+              parallaxProjects()
+            )}
+            {/* {parallaxProjects()} */}
+          </ParallaxProvider>
+        )}
       </div>
     </div>
   );
