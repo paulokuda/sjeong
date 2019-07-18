@@ -101,23 +101,23 @@ function Landing(props) {
                     <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto: jeongsteph@gmail.com"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
                     <div>EMAIL</div>
-                    <div>[JEONGSTEPH@GMAIL.COM]</div>
+                    <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener">[JEONGSTEPH@GMAIL.COM]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>TWITTER</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https:/www.twitter.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>INSTAGRAM</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>DRIBBBLE</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https://dribbble.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                 </div>
               </div>
@@ -133,10 +133,10 @@ function Landing(props) {
               My name is Steph Jeong, and I’m a digital designer who specializes in product, but dabbles in all things creative. I was born in Seoul, Korea, where Gangnam Style was based in. In my puberty days, my family moved to a small town in Georgia until I went off to Carnegie Mellon University to study communication design. Now, I’m happily living in Brooklyn, NY.
               <br></br>
               <br></br>
-              Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to <span className="black-text">[Say Hi]</span>. I also just like to make new friends, so feel free to follow me on <span className="black-text" onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Twitter]</a></span> or <span className="black-text" onMouseEnter={() => setShowInstagramBackground(true)} onMouseLeave={() => setShowInstagramBackground(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Instagram]</a></span> where you’ll find some high-quality curation of dumb shit only. 
+                  Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to reach out.
               <br></br>
               <br></br>
-              When I’m not designing, I love to cook for friends, stalk other people’s cats on instagram, and be a blanket burrito. Sometimes, I also write to share my knowledge and thoughts. If you ever want to learn how to be more sketchy, check out my <span className="black-text">[Article]</span>.  Thanks for stopping by!
+              When I’m not designing, I love to cook for friends, stalk other people’s cats, and curate my <span className="black-text" onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Twitter]</a></span> or <span className="black-text" onMouseEnter={() => setShowInstagramBackground(true)} onMouseLeave={() => setShowInstagramBackground(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Instagram]</a></span> with dumb shit only. If you’re as funny as me, please say hello. Thanks for stopping by! 
               </div>
           </div>
         </Parallax>
@@ -151,7 +151,7 @@ function Landing(props) {
                 <div>&#169;2019 ALL RIGHTS RESERVED</div>
               </div>
               <div className="nav-block nav-right-block">
-                &#169;2019
+                (SCROLL) &#8595;
               </div>
             </div>
             <div className="client-landing__projects-text">Projects (2016 - 2019)</div>
@@ -169,7 +169,7 @@ function Landing(props) {
             <div className="client-landing__item">Credit Karma</div>
             <div className="client-landing__item">Fetch</div>
             <div className="client-landing__item">&You</div>
-            <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
+            <div className="client-landing__item client-list-message-me"><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><FlashingText>[MESSAGE ME]</FlashingText></a></div>
           </div>
           {props.isMobileScreen ? (
             <div style={{ height: "1100px" }}>
