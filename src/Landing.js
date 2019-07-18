@@ -170,7 +170,7 @@ function Landing(props) {
           <div className="client-landing__item">Credit Karma</div>
           <div className="client-landing__item">Fetch</div>
           <div className="client-landing__item">&You</div>
-          <div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div>
+          <a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><div className="client-landing__item client-list-message-me"><FlashingText>[MESSAGE ME]</FlashingText></div></a>
         </div>
         {!props.isMobileScreen && (
           <ParallaxProvider>
