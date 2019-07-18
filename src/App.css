@@ -276,26 +276,36 @@ body {
 .first-project-image {
   background: url('./first-project.png') no-repeat center center;
   background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .second-project-image {
   background: url('./second-project.png') no-repeat center center;
   background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .third-project-image {
   background: url('./third-project.png') no-repeat center center;
   background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .fourth-project-image {
   background: url('./fourth-project.png') no-repeat center center;
   background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .fifth-project-image {
   background: url('./fifth-project.png') no-repeat center center;
   background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .client-project-image__black-bg {
@@ -441,9 +451,6 @@ body {
   visibility: hidden;
 }
 
-.about-me__picture-mask_visible {
-  visibility: visible;
-}
 
 .client-wrapper {
   position: absolute;
@@ -461,6 +468,7 @@ body {
 
 .client-wrapper-nav {
   width: 80vw;
+  letter-spacing: -0.02vw;
   color: #fff;
 }
 
@@ -645,6 +653,14 @@ body {
   }
 
   .black-text {
+    color: #000;
+  }
+
+ .black-text a:link {
+    color: #000;
+  }
+
+  .black-text a:visited {
     color: #000;
   }
 

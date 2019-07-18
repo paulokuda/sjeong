@@ -101,23 +101,23 @@ function Landing(props) {
                     <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto: jeongsteph@gmail.com"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
                     <div>EMAIL</div>
-                    <div>[JEONGSTEPH@GMAIL.COM]</div>
+                    <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener">[JEONGSTEPH@GMAIL.COM]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>TWITTER</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https:/www.twitter.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>INSTAGRAM</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>DRIBBBLE</div>
-                    <div>[@JEONGSTEPH]</div>
+                    <div><a href="https://dribbble.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                 </div>
               </div>

@@ -37,7 +37,7 @@ const ALL_PROJECTS = [
     mobileY: ["450px", "-830px"],
     y: ["1850px", "-1530px"],
     mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vh", left: "25vw" },
-    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "5vw" },
+    styleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "5vh", left: "0vw" },
     styleInner: { background: "#dbe2e5" },
     className: "client-project-card__01",
     imageClassName: "first-project-image",
