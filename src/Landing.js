@@ -104,19 +104,19 @@ function Landing(props) {
                 <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
-                    <div>EMAIL</div>
+                    <div>{props.isMobileScreen ? "EM" : "EMAIL"}</div>
                     <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener">[JEONGSTEPH@GMAIL.COM]</a></div>
                   </div>
                   <div className="about-me-footer__section">
-                    <div>TWITTER</div>
+                    <div>{props.isMobileScreen ? "TW" : "TWITTER"}</div>
                     <div><a href="https:/www.twitter.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
-                    <div>INSTAGRAM</div>
+                    <div>{props.isMobileScreen ? "IG" : "INSTAGRAM"}</div>
                     <div><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
-                    <div>DRIBBBLE</div>
+                    <div>{props.isMobileScreen ? "DR" : "DRIBBBLE"}</div>
                     <div><a href="https://dribbble.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
                   </div>
                 </div>
