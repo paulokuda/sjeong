@@ -12,6 +12,26 @@
         .client-project-card__image {
             border-color: white;
         }
+
+        .first-project-image {
+            background: url('./project1_glitch.gif') no-repeat center center;
+        }
+
+        .second-project-image {
+            background: url('./project2_glitch.gif') no-repeat center center;
+        }
+
+        .third-project-image {
+            background: url('./project3_glitch.gif') no-repeat center center;
+        }
+
+        .fourth-project-image {
+            background: url('./project4_glitch.gif') no-repeat center center;
+        }
+
+        .fifth-project-image {
+            background: url('./project5_glitch.gif') no-repeat center center;
+        }
     }
 }
 
@@ -26,4 +46,11 @@ a {
     &:hover {
         color: red;
     }
+}
+
+.first-project-image {
+  background: url('./first-project.png') no-repeat center center;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
 }
