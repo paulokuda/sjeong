@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import GlitchEffect from 'react-glitch-effect';
 import './App.css';
 import FlashingText from './FlashingText';
 
@@ -28,7 +27,7 @@ function Landing(props) {
         setLandingInView(true);
       }
     })
-  });
+  }, [isLandingInView]);
   
   const isElementOutOfViewport = (el) => {
     if (el == null) { return; }
@@ -43,7 +42,7 @@ function Landing(props) {
     return props.displayedProjects.map((project, index) => (
       <Parallax key={`project-${index}`} y={props.isMobileScreen ? project.mobileY : project.y} styleOuter={props.isMobileScreen ? project.mobileStyleOuter : project.styleOuter } styleInner={project.styleInner}>
           <div className={`client-project-card ${project.className}`} onClick={props.toggleNdaViewCallback}>
-            <div className="project-card-glitch-container" className={`project-card-glitch-container ${project.imageClassName}`} />
+            <div className={`project-card-glitch-container ${project.imageClassName}`} />
             <div className="client-project-number">&#8627; [project {project.projectNumber}]</div>
           </div>
       </Parallax>
@@ -97,23 +96,23 @@ function Landing(props) {
                     <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "EM" : "EMAIL"}</div>
-                    <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener">[JEONGSTEPH@GMAIL.COM]</a></div>
+                    <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer">[JEONGSTEPH@GMAIL.COM]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "TW" : "TWITTER"}</div>
-                    <div><a href="https:/www.twitter.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
+                    <div><a href="https:/www.twitter.com/jeongsteph" target="_blank" rel="noopener noreferrer">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "IG" : "INSTAGRAM"}</div>
-                    <div><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
+                    <div><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener noreferrer">[@JEONGSTEPH]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "DR" : "DRIBBBLE"}</div>
-                    <div><a href="https://dribbble.com/jeongsteph" target="_blank" rel="noopener">[@JEONGSTEPH]</a></div>
+                    <div><a href="https://dribbble.com/jeongsteph" target="_blank" rel="noopener noreferrer">[@JEONGSTEPH]</a></div>
                   </div>
                 </div>
               </div>
@@ -133,7 +132,7 @@ function Landing(props) {
                 Currently, I’m a senior designer at Ueno, where I get to work with some amazing people. Working with other people brings the best out of me, so if you’re a nice person looking for someone to collaborate with, don’t hesitate to reach out.
                 <br></br>
                 <br></br>
-                When I’m not designing, I love to cook for friends, stalk other people’s cats, and curate my <span className="black-text" style={{ pointerEvents: "auto" }} onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Twitter]</a></span> or <span className="black-text" style={{ pointerEvents: "auto" }} onMouseEnter={() => setShowInstagramBackground(true)} onMouseLeave={() => setShowInstagramBackground(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener">[Instagram]</a></span> with dumb shit only. If you’re as funny as me, please say hello. Thanks for stopping by!
+                When I’m not designing, I love to cook for friends, stalk other people’s cats, and curate my <span className="black-text" style={{ pointerEvents: "auto" }} onMouseEnter={() => setShowTwitterCard(true)} onMouseLeave={() => setShowTwitterCard(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener noreferrer">[Twitter]</a></span> or <span className="black-text" style={{ pointerEvents: "auto" }} onMouseEnter={() => setShowInstagramBackground(true)} onMouseLeave={() => setShowInstagramBackground(false)}><a href="https:/www.instagram.com/jeongsteph" target="_blank" rel="noopener noreferrer">[Instagram]</a></span> with dumb shit only. If you’re as funny as me, please say hello. Thanks for stopping by!
                 </div>
             </div>
           </Parallax>
@@ -166,7 +165,7 @@ function Landing(props) {
           <div className="client-landing__item">Credit Karma</div>
           <div className="client-landing__item">Fetch</div>
           <div className="client-landing__item">&You</div>
-          <a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener"><div className="client-landing__item client-list-message-me"><FlashingText disableBlinkingOnHover={true}>[MESSAGE ME]</FlashingText></div></a>
+          <a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer"><div className="client-landing__item client-list-message-me"><FlashingText disableBlinkingOnHover={true}>[MESSAGE ME]</FlashingText></div></a>
         </div>
         {!props.isMobileScreen && (
           <ParallaxProvider>
