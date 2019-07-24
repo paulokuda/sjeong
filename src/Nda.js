@@ -56,7 +56,7 @@ function Nda(props) {
                     <div className="nda-photo">
                         <div className="nda-photo__tear-initial" style={{ top: `${tearTop}%` }} />
                     </div>
-                    <span className="nda-message-me">[ENTER PASSWORD]</span>
+                    <span className="nda-message-me" onClick={props.onPasswordClick}>[ENTER PASSWORD]</span>
                 </div>
             </div>
         </div>

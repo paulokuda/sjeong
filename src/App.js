@@ -82,7 +82,8 @@ const ALL_PROJECTS = [
 const MOBILE_BREAKPOINT = 600;
 
 function App() {
-  const [showNda, setShowNda] = useState(false);
+  const [showNda, setShowNda] = useState(true);
+  const [showPasswordPage, setShowPasswordPage] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWindowDimensions = () => {
@@ -95,9 +96,23 @@ function App() {
   
   const toggleNdaViewCallback = () => setShowNda(!showNda);
 
+  const handleSetShowPasswordPage = () => {
+    setShowNda(false);
+    setShowPasswordPage(true);
+  }
+
+  const maybeRenderNdaOrPassword = () => {
+    if (showNda) {
+      return <Nda isOpen={showNda} toggleNdaViewCallback={toggleNdaViewCallback} onPasswordClick={handleSetShowPasswordPage} />
+    } else if (showPasswordPage) {
+      return <div className="password-main">This page is password protected</div>
+    }
+    return null;
+  }
+
   return (
     <>
-      <Nda isOpen={showNda} toggleNdaViewCallback={toggleNdaViewCallback} />
+      {maybeRenderNdaOrPassword()}
       <Landing displayedProjects={ALL_PROJECTS} isMobileScreen={windowWidth < MOBILE_BREAKPOINT} toggleNdaViewCallback={toggleNdaViewCallback} />
     </>
   );
