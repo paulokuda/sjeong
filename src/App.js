@@ -82,7 +82,7 @@ const ALL_PROJECTS = [
 const MOBILE_BREAKPOINT = 600;
 
 function App() {
-  const [showNda, setShowNda] = useState(true);
+  const [showNda, setShowNda] = useState(false);
   const [showPasswordPage, setShowPasswordPage] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
