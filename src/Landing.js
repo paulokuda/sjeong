@@ -16,10 +16,10 @@ function Landing(props) {
       window.scrollTo(0, 0);
     }
   }, []);
-  
+
   useEffect(() => {
     setSlideInLanding(true);
-    
+
     document.addEventListener("scroll", () => {
       if (isElementOutOfViewport(landingWrapperRef.current) && isLandingInView) {
         setLandingInView(false);
@@ -28,11 +28,11 @@ function Landing(props) {
       }
     })
   }, [isLandingInView]);
-  
+
   const isElementOutOfViewport = (el) => {
     if (el == null) { return; }
     const rect = el.getBoundingClientRect();
-    return ((rect.x + rect.width) < 0 
+    return ((rect.x + rect.width) < 0
              || (rect.y + rect.height) < 0
              || (rect.x > window.innerWidth || rect.y > window.innerHeight)
     );
@@ -54,11 +54,11 @@ function Landing(props) {
       return "38vh";
     }
     if (!slideInLanding) {
-      return "70vh";  
+      return "70vh";
     }
     return "40vh";
   }
-  
+
   return (
     <div className={`landing-body ${slideInLanding ? "landing-body__visible" : ""}`}>
       {showTwitterCard ? (
@@ -96,11 +96,11 @@ function Landing(props) {
                     <div>BK, NY &#169;2019</div>
                   </div>
                 </div>
-                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
+                <div className="collab-blurb banner-text"><div>LET’S COLLAB</div><a href="mailto:jeongsteph@gmail.com"><FlashingText className="collab-blurb-hello">[SAY HELLO]</FlashingText></a></div>
                 <div className="about-me-footer">
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "EM" : "EMAIL"}</div>
-                    <div><a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer">[JEONGSTEPH@GMAIL.COM]</a></div>
+                    <div><a href="mailto:jeongsteph@gmail.com">[JEONGSTEPH@GMAIL.COM]</a></div>
                   </div>
                   <div className="about-me-footer__section">
                     <div>{props.isMobileScreen ? "TW" : "TWITTER"}</div>
@@ -165,7 +165,7 @@ function Landing(props) {
           <div className="client-landing__item">Credit Karma</div>
           <div className="client-landing__item">Fetch</div>
           <div className="client-landing__item">&You</div>
-          <a href="mailto:jeongsteph@gmail.com" target="_blank" rel="noopener noreferrer"><div className="client-landing__item client-list-message-me"><FlashingText disableBlinkingOnHover={true}>[MESSAGE ME]</FlashingText></div></a>
+          <a href="mailto:jeongsteph@gmail.com"><div className="client-landing__item client-list-message-me"><FlashingText disableBlinkingOnHover={true}>[MESSAGE ME]</FlashingText></div></a>
         </div>
         {!props.isMobileScreen && (
           <ParallaxProvider>

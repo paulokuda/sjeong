@@ -320,7 +320,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  
+
   display: flex;
   flex-direction: column;
   background: #E44A1B;
@@ -400,12 +400,6 @@ body {
   background-color: #E44A1B;
 }
 
-.nda-message-me {
-  padding-top: 2.55vw;
-  font-size: 2vw;
-  color: #fff;
-}
-
 .flashing-text__hidden {
   opacity: 0;
 }
@@ -429,7 +423,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 2.5vw;
- 
+
 }
 
 .nda-photo__tear-initial {

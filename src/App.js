@@ -33,7 +33,7 @@ const ALL_PROJECTS = [
     imageClassName: "fourth-project-image",
     imageUrl: fourthPhotoUrl,
   },
-  { 
+  {
     mobileY: ["450px", "-830px"],
     y: ["1850px", "-1530px"],
     mobileStyleOuter: { width: "30vw", height: "40vw", position: "absolute", top: "40vh", left: "25vw" },
@@ -83,29 +83,21 @@ const MOBILE_BREAKPOINT = 600;
 
 function App() {
   const [showNda, setShowNda] = useState(false);
-  const [showPasswordPage, setShowPasswordPage] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWindowDimensions = () => {
     setWindowWidth(window.innerWidth);
   }
-  
+
   useEffect(() => {
     window.addEventListener('resize', updateWindowDimensions);
   })
-  
-  const toggleNdaViewCallback = () => setShowNda(!showNda);
 
-  const handleSetShowPasswordPage = () => {
-    setShowNda(false);
-    setShowPasswordPage(true);
-  }
+  const toggleNdaViewCallback = () => setShowNda(!showNda);
 
   const maybeRenderNdaOrPassword = () => {
     if (showNda) {
-      return <Nda isOpen={showNda} toggleNdaViewCallback={toggleNdaViewCallback} onPasswordClick={handleSetShowPasswordPage} />
-    } else if (showPasswordPage) {
-      return <div className="password-main">This page is password protected</div>
+      return <Nda isOpen={showNda} toggleNdaViewCallback={toggleNdaViewCallback} />
     }
     return null;
   }

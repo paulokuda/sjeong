@@ -13,7 +13,7 @@ function Nda(props) {
 
     let renderInterval;
     let tearInterval;
-    
+
     useEffect(() => {
         renderInterval = setInterval(renderNda, 100);
         tearInterval = setInterval(() => {
@@ -29,7 +29,7 @@ function Nda(props) {
             clearInterval(tearInterval);
         }
     }, []);
-    
+
     function renderNda() {
         if (currentNdaElements.length !== NDA_COUNT) {
             currentNdaElements.push(NDA_ELEMENT);
@@ -37,7 +37,7 @@ function Nda(props) {
         }
     }
 
-    
+
     return (
         <div className={`nda-main ${props.isOpen ? "nda-main__visible" : ""}`}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>{currentNdaElements}</div>
@@ -56,7 +56,7 @@ function Nda(props) {
                     <div className="nda-photo">
                         <div className="nda-photo__tear-initial" style={{ top: `${tearTop}%` }} />
                     </div>
-                    <span className="nda-message-me" onClick={props.onPasswordClick}>[ENTER PASSWORD]</span>
+                    <a href="mailto:jeongsteph@gmail.com" className="nda-message-me">[MESSAGE ME]</a>
                 </div>
             </div>
         </div>
